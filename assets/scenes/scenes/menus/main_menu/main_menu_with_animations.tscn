@@ -315,7 +315,7 @@ graph_offset = Vector2(-180.277, 49)
 
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_42no1")]
 script = ExtResource("2_pph4s")
-game_scene_path = "res://assets/scenes/scenes/game_scene/game_ui.tscn"
+game_scene_path = "uid://csrtb3d80tmlk"
 options_packed_scene = ExtResource("3_qnwls")
 credits_packed_scene = ExtResource("4_tmvcl")
 
@@ -330,6 +330,9 @@ parameters/conditions/intro_done = false
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
 
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+text = "GMTK2026"
+
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
 
@@ -341,6 +344,9 @@ lock = true
 
 [node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
+
+[node name="ExitConfirmation" parent="." index="5" unique_id=1903054312]
+ignore_siblings = false
 
 [node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
 layout_mode = 1

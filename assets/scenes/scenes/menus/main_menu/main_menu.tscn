@@ -7,6 +7,11 @@
 
 [node name="MainMenu" unique_id=170048243 instance=ExtResource("1_whn2r")]
 script = ExtResource("2_yden7")
-game_scene_path = "res://assets/scenes/scenes/game_scene/game_ui.tscn"
 options_packed_scene = ExtResource("3_rnn33")
 credits_packed_scene = ExtResource("4_3rnj4")
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" parent_id_path=PackedInt32Array(704939549) index="0" unique_id=334107926]
+text = "GMTK2026"
+
+[node name="ExitConfirmation" parent="." index="3" unique_id=1903054312]
+ignore_siblings = false

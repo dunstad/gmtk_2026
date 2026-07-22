@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgi1h835kcrt5"]
+
+[ext_resource type="TileSet" uid="uid://bvo0stvm3ebot" path="res://assets/art/new_tile_set.tres" id="1_tt180"]
+[ext_resource type="PackedScene" uid="uid://dqi7ekpwfx780" path="res://assets/platformer_template/Scenes/Player/player.tscn" id="2_qkwhb"]
+
+[node name="BaseLevel" type="Node2D" unique_id=1904546924]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=212305829]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_tt180")
+
+[node name="Player" parent="." unique_id=347908142 instance=ExtResource("2_qkwhb")]
+position = Vector2(0, -75)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1909339084]
+position = Vector2(325, -208)
+zoom = Vector2(0.59, 0.59)
