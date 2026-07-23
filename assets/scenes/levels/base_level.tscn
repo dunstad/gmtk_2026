@@ -1,14 +1,16 @@
 [gd_scene format=3 uid="uid://cgi1h835kcrt5"]
 
-[ext_resource type="TileSet" uid="uid://bvo0stvm3ebot" path="res://assets/art/new_tile_set.tres" id="1_m426i"]
+[ext_resource type="TileSet" uid="uid://c7xrbajlxx4iu" path="res://assets/art/tiles2.tres" id="1_okpoa"]
 [ext_resource type="PackedScene" uid="uid://dqi7ekpwfx780" path="res://assets/platformer_template/Scenes/Player/player.tscn" id="2_okpoa"]
 [ext_resource type="Script" uid="uid://c8qeg24x1jukp" path="res://assets/scripts/level_timer.gd" id="3_okpoa"]
+[ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="4_tf2qc"]
 
 [node name="BaseLevel" type="Node2D" unique_id=1904546924]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=212305829]
+modulate = Color(0.1764706, 0.3764706, 0.8784314, 1)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0)
-tile_set = ExtResource("1_m426i")
+tile_set = ExtResource("1_okpoa")
 
 [node name="Player" parent="." unique_id=347908142 instance=ExtResource("2_okpoa")]
 position = Vector2(0, -75)
@@ -34,3 +36,76 @@ theme_override_font_sizes/normal_font_size = 87
 text = "-88"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Background" type="Node2D" parent="." unique_id=2008904633]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1447360882]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -10
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Background" unique_id=502130650]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -11
+position = Vector2(1922, 0)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Background" unique_id=107136959]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -11
+position = Vector2(-1936, 0)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Background" unique_id=1384431741]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(5796, 0)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Background" unique_id=481870419]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(7718, 0)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Background" unique_id=693075571]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(3860, 0)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Background" unique_id=1387488526]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -10
+position = Vector2(0, -2421)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Background" unique_id=2136633731]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -11
+position = Vector2(1922, -2421)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Background" unique_id=1258723927]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -11
+position = Vector2(-1936, -2421)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Background" unique_id=692816537]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(5796, -2421)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Background" unique_id=566889652]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(7718, -2421)
+texture = ExtResource("4_tf2qc")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Background" unique_id=1824879218]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -12
+position = Vector2(3860, -2421)
+texture = ExtResource("4_tf2qc")

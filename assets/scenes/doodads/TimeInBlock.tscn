@@ -20,7 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_528rg"]
 resource_name = "time_in"
-length = 0.19999999999999998
+length = 0.2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -58,8 +58,11 @@ _data = {
 
 [node name="TimeInBlock" unique_id=1143183206 instance=ExtResource("1_vohtq")]
 modulate = Color(1, 1, 1, 0.49803922)
-collision_enabled = false
 script = ExtResource("2_528rg")
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=581115316]
+[node name="TileMapLayer" parent="." index="0" unique_id=1143183206]
+modulate = Color(1, 0.6392157, 0, 1)
+collision_enabled = false
+
+[node name="AnimationPlayer" parent="." index="2" unique_id=581115316]
 libraries/ = SubResource("AnimationLibrary_iu774")

@@ -1,8 +1,9 @@
-extends TileMapLayer
+extends Node2D
 var text
 @export var seconds_remaining := 3
 
 @onready var animation_player := $AnimationPlayer
+@onready var tilemap_layer := $TileMapLayer
 
 func _ready():
 	var timer = get_tree().get_nodes_in_group("LevelTimer")[-1]

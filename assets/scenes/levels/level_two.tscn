@@ -17,4 +17,4 @@ position = Vector2(640, -256)
 position = Vector2(256, -128)
 
 [node name="NextLevel" parent="." index="6" unique_id=653421381 instance=ExtResource("4_jorsp")]
-position = Vector2(1231, -60)
+position = Vector2(1231, -72)
