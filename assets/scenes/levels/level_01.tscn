@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://csrtb3d80tmlk"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_ox0mv"]
-[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/tutorial_text.tscn" id="2_aqje6"]
+[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="2_aqje6"]
 [ext_resource type="PackedScene" uid="uid://bvxtwhb3n4mpi" path="res://assets/scenes/levels/level_02.tscn" id="3_ox0mv"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ox0mv")]

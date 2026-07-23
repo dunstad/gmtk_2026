@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c23vpe06pmtwy"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_lo06w"]
+[ext_resource type="PackedScene" uid="uid://ckcij56j0djt5" path="res://assets/scenes/doodads/TimeInBlockEvenVert.tscn" id="2_f03s1"]
+[ext_resource type="PackedScene" uid="uid://d15jmtsfg0w3f" path="res://assets/scenes/levels/level_09.tscn" id="2_xhyxn"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_lo06w")]
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+next_scene = ExtResource("2_xhyxn")
+
+[node name="TimeInBlockEvenVert" parent="." index="6" unique_id=1143183206 instance=ExtResource("2_f03s1")]
+position = Vector2(640, -128)
+seconds_remaining = 2

@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="4_tf2qc"]
 [ext_resource type="PackedScene" uid="uid://mmxpnx20bo23" path="res://assets/scenes/doodads/NextLevel.tscn" id="6_we6oa"]
 [ext_resource type="PackedScene" uid="uid://o0tnxlpmm0c" path="res://assets/scenes/scenes/end_credits/end_credits.tscn" id="7_xefct"]
+[ext_resource type="PackedScene" uid="uid://bv1psa8ebdb5f" path="res://assets/scenes/doodads/RestartArea.tscn" id="8_xefct"]
 
 [node name="BaseLevel" type="Node2D" unique_id=1904546924]
 
@@ -55,5 +56,8 @@ z_index = -10
 texture = ExtResource("4_tf2qc")
 
 [node name="NextLevel" parent="." unique_id=653421381 instance=ExtResource("6_we6oa")]
-position = Vector2(1225, -72)
+position = Vector2(1152, 0)
 next_scene = ExtResource("7_xefct")
+
+[node name="RestartArea" parent="." unique_id=1556750547 instance=ExtResource("8_xefct")]
+position = Vector2(512, 256)

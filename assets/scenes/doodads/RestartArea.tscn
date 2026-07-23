@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bv1psa8ebdb5f"]
+
+[ext_resource type="Script" uid="uid://5gahvb8ce6u3" path="res://assets/scripts/restart_area.gd" id="1_8kmfn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_acvp6"]
+size = Vector2(6912, 1408)
+
+[node name="RestartArea" type="Area2D" unique_id=1556750547]
+script = ExtResource("1_8kmfn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=127345159]
+position = Vector2(128, 704)
+shape = SubResource("RectangleShape2D_acvp6")

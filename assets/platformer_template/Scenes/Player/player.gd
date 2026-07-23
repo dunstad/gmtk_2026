@@ -127,8 +127,6 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("Restart"):
 		restart()
-		get_tree().get_nodes_in_group("LevelTimer")[-1].restart()
-	
 	
 	if Input.is_action_just_pressed("Jump"):
 		jump()
@@ -148,6 +146,7 @@ func _physics_process(delta):
 
 func restart():
 	global_position = start_pos
+	get_tree().get_nodes_in_group("LevelTimer")[-1].restart()
 
 
 # Adds the player's jump velocity if able

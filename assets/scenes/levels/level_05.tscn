@@ -1,17 +1,29 @@
-[gd_scene format=3 uid="uid://dubd3wyyvlnep"]
+[gd_scene format=4 uid="uid://dubd3wyyvlnep"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_ce8n6"]
 [ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_jws6d"]
+[ext_resource type="PackedScene" uid="uid://b8g2kfty1nwk3" path="res://assets/scenes/levels/level_07.tscn" id="2_wuc3q"]
+[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="3_lru3v"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ce8n6")]
 
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAACAAEAAAALAP//AAACAAEAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAAAAAABAAIAAAAGAAAAAAABAAIAAAAHAAAAAAABAAIAAAAIAAAAAAABAAIAAAAJAAAAAAABAAIAAAAKAAAAAAABAAIAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAAGAP7/AAAAAAAAAAAHAP7/AAABAAAAAAAIAP7/AAABAAAAAAAJAP7/AAABAAAAAAAKAP7/AAABAAAAAAAGAP//AAAAAAEAAAAHAP//AAABAAEAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAPz/AAADAAAAAAALAP3/AAADAAEAAAA=")
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1152, -256)
+next_scene = ExtResource("2_wuc3q")
+
 [node name="TimeOutBlock" parent="." index="5" unique_id=338073152 instance=ExtResource("2_jws6d")]
 position = Vector2(512, -128)
+seconds_remaining = 4
 
 [node name="TimeOutBlock2" parent="." index="6" unique_id=1581073078 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_jws6d")]
 position = Vector2(640, -256)
 relative_time = NodePath("../TimeOutBlock")
+seconds_remaining = -1
 
-[node name="TimeOutBlock3" parent="." index="7" unique_id=87825422 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_jws6d")]
-position = Vector2(768, -384)
-relative_time = NodePath("../TimeOutBlock2")
+[node name="TutorialText" parent="." index="8" unique_id=1355908254 instance=ExtResource("3_lru3v")]
+offset_top = -789.0
+offset_bottom = 491.0
+text = "Press R or the Y button to restart."

@@ -14,10 +14,12 @@ func _ready():
 		relative_time = relative_time.relative_time
 
 	var timer = get_tree().get_nodes_in_group("LevelTimer")[-1]
-	print(timer)
+	# print(timer)
 	timer.connect("one_second", update_time)
 	text = $RichTextLabel
 	text.text = str(seconds_remaining)
+
+	self.update_time(0)
 
 func update_time(change: int):
 	seconds_remaining += change

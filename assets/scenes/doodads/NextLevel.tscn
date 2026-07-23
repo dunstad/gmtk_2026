@@ -66,15 +66,17 @@ _data = {
 script = ExtResource("1_fxg08")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1205380979]
+position = Vector2(64, -72.5)
 shape = SubResource("CircleShape2D_acvp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=912907136]
 material = ExtResource("3_f2lb2")
-position = Vector2(0, 5)
+position = Vector2(64, -67.5)
 texture = ExtResource("3_u8jqu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1519271561]
 modulate = Color(1, 0.6392157, 0, 1)
+position = Vector2(64, -72.5)
 texture = ExtResource("4_8wlrb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615950682]
