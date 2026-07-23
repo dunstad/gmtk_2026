@@ -1,23 +1,25 @@
-[gd_scene format=3 uid="uid://cgi1h835kcrt5"]
+[gd_scene format=4 uid="uid://cgi1h835kcrt5"]
 
 [ext_resource type="TileSet" uid="uid://c7xrbajlxx4iu" path="res://assets/art/tiles2.tres" id="1_okpoa"]
 [ext_resource type="PackedScene" uid="uid://dqi7ekpwfx780" path="res://assets/platformer_template/Scenes/Player/player.tscn" id="2_okpoa"]
 [ext_resource type="Script" uid="uid://c8qeg24x1jukp" path="res://assets/scripts/level_timer.gd" id="3_okpoa"]
 [ext_resource type="Texture2D" uid="uid://b8lyumi3caqqe" path="res://assets/art/clock_without_hands_lighter.png" id="4_1onrq"]
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="4_tf2qc"]
+[ext_resource type="PackedScene" uid="uid://mmxpnx20bo23" path="res://assets/scenes/doodads/NextLevel.tscn" id="6_we6oa"]
+[ext_resource type="PackedScene" uid="uid://o0tnxlpmm0c" path="res://assets/scenes/scenes/end_credits/end_credits.tscn" id="7_xefct"]
 
 [node name="BaseLevel" type="Node2D" unique_id=1904546924]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=212305829]
 modulate = Color(0.1764706, 0.3764706, 0.8784314, 1)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0)
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAAAAAABAAMAAAAGAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
 tile_set = ExtResource("1_okpoa")
 
 [node name="Player" parent="." unique_id=347908142 instance=ExtResource("2_okpoa")]
 position = Vector2(0, -75)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1909339084]
-position = Vector2(325, -208)
+position = Vector2(653, -309)
 zoom = Vector2(0.59, 0.59)
 
 [node name="LevelTimer" type="Node2D" parent="Camera2D" unique_id=1222551870 groups=["LevelTimer"]]
@@ -51,3 +53,7 @@ texture = ExtResource("4_1onrq")
 modulate = Color(0.08000007, 0, 0.3, 1)
 z_index = -10
 texture = ExtResource("4_tf2qc")
+
+[node name="NextLevel" parent="." unique_id=653421381 instance=ExtResource("6_we6oa")]
+position = Vector2(1225, -72)
+next_scene = ExtResource("7_xefct")

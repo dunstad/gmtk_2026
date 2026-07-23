@@ -1,0 +1,20 @@
+[gd_scene format=4 uid="uid://dqokjq2vyojm3"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_45k1v"]
+[ext_resource type="PackedScene" uid="uid://boq8amqhsl20o" path="res://assets/scenes/levels/level_04.tscn" id="2_u1qx8"]
+[ext_resource type="PackedScene" uid="uid://hecks1e6igvf" path="res://assets/scenes/doodads/TimeOutBlockEvenVert.tscn" id="3_dyq08"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_45k1v")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAAAAAABAAMAAAAGAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAABAAEAAAD+/wAAAAABAAEAAAA=")
+
+[node name="Camera2D" parent="." index="2" unique_id=1909339084]
+position = Vector2(610, -328)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1288, -72)
+next_scene = ExtResource("2_u1qx8")
+
+[node name="TimeOutBlockEvenVert" parent="." index="5" unique_id=338073152 instance=ExtResource("3_dyq08")]
+position = Vector2(640, -128)

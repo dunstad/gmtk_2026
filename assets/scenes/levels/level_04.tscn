@@ -1,0 +1,23 @@
+[gd_scene format=4 uid="uid://boq8amqhsl20o"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_1d7nf"]
+[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/tutorial_text.tscn" id="2_61fay"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="3_hye5e"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_1d7nf")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
+
+[node name="TutorialText" parent="." index="5" unique_id=1355908254 instance=ExtResource("2_61fay")]
+offset_top = -789.0
+offset_bottom = 491.0
+text = "Press R or the Y button to restart."
+
+[node name="TimeOutBlock" parent="." index="6" unique_id=338073152 instance=ExtResource("3_hye5e")]
+position = Vector2(512, 0)
+
+[node name="TileMapLayer" parent="TimeOutBlock" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD+/wAAAAAAAAMAAAACAAAAAAACAAMAAAD//wAAAAABAAMAAAABAAAAAAABAAMAAAA=")
+
+[editable path="TimeOutBlock"]

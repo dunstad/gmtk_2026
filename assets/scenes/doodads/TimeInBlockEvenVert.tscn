@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ckcij56j0djt5"]
+
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="1_iw4ve"]
+
+[node name="TimeInBlockEvenVert" unique_id=1143183206 instance=ExtResource("1_iw4ve")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 0, 0, 0, 0)
+
+[node name="RichTextLabel" parent="." index="1" unique_id=1915863219]
+offset_top = -64.0
+offset_bottom = 64.0

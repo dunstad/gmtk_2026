@@ -61,3 +61,5 @@ func _on_exit_button_pressed():
 
 func _on_menu_button_pressed():
 	load_main_menu()
+	self.queue_free()
+	

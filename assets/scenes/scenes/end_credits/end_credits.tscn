@@ -6,8 +6,9 @@
 
 [node name="EndCredits" unique_id=241213605 instance=ExtResource("1_rl8m7")]
 script = ExtResource("2_5nw4w")
-main_menu_scene_path = "res://assets/scenes/scenes/menus/main_menu/main_menu_with_animations.tscn"
+main_menu_scene_path = "uid://gqbd4w3fayv6"
 force_mouse_mode_visible = false
+scroll_paused = true
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="0" unique_id=1680337145]
 layout_mode = 1
@@ -28,6 +29,18 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
+[node name="ScrollContainer" parent="." index="2" unique_id=1826061058]
+scroll_vertical = 1869
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="0" unique_id=1055754816]
+custom_minimum_size = Vector2(0, 648)
+
+[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="1" unique_id=951333631]
+custom_minimum_size = Vector2(1152, 0)
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="2" unique_id=1487637013]
+custom_minimum_size = Vector2(0, 648)
+
 [node name="CenterContainer" type="CenterContainer" parent="." index="3" unique_id=1516904581]
 layout_mode = 0
 anchor_right = 1.0
@@ -38,7 +51,6 @@ mouse_filter = 2
 
 [node name="EndMessagePanel" type="Panel" parent="CenterContainer" index="0" unique_id=213736646]
 unique_name_in_owner = true
-visible = false
 custom_minimum_size = Vector2(360, 120)
 layout_mode = 2
 

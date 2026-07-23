@@ -54,10 +54,12 @@ extends CharacterBody2D
 @onready var jump_gravity : float = (-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak) * -1
 @onready var fall_gravity : float = (-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent) * -1
 
+var start_pos : Vector2
 
 func _ready():
 	coyote_timer.wait_time = coyote_timer_value
 	jump_buffer_timer.wait_time = jump_buffer_timer_value
+	start_pos = global_position
 
 
 # Sets the gravity depending on the context
@@ -122,6 +124,11 @@ func _physics_process(delta):
 
 	if can_add_time and Input.is_action_just_pressed("Add_Time"):
 		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)
+
+	if Input.is_action_just_pressed("Restart"):
+		restart()
+		get_tree().get_nodes_in_group("LevelTimer")[-1].restart()
+	
 	
 	if Input.is_action_just_pressed("Jump"):
 		jump()
@@ -138,6 +145,9 @@ func _physics_process(delta):
 #		_projected_jump_trajectory(delta, sign(velocity.x))
 	
 	move_and_slide()
+
+func restart():
+	global_position = start_pos
 
 
 # Adds the player's jump velocity if able
