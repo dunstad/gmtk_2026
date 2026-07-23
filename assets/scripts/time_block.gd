@@ -1,0 +1,16 @@
+extends TileMapLayer
+var text
+@export var seconds_remaining := 3
+
+@onready var animation_player := $AnimationPlayer
+
+func _ready():
+	var timer = get_tree().get_nodes_in_group("LevelTimer")[-1]
+	print(timer)
+	timer.connect("one_second", update_time)
+	text = $RichTextLabel
+	text.text = str(seconds_remaining)
+
+func update_time():
+	seconds_remaining -= 1
+	text.text = str(seconds_remaining)

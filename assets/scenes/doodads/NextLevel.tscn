@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://mmxpnx20bo23"]
+
+[ext_resource type="Texture2D" uid="uid://xfv4yq8ry1mx" path="res://assets/art/rect2.png" id="1_1aaqe"]
+[ext_resource type="Script" uid="uid://bk7hb7gyu3ab2" path="res://assets/scripts/next_level.gd" id="1_fxg08"]
+[ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="3_lm63c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acvp6"]
+radius = 67.0
+
+[sub_resource type="Animation" id="Animation_lm63c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f2lb2"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_iwj4p"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f2lb2"]
+_data = {
+&"RESET": SubResource("Animation_lm63c"),
+&"fade_in": SubResource("Animation_f2lb2"),
+&"fade_out": SubResource("Animation_iwj4p")
+}
+
+[node name="NextLevel" type="Area2D" unique_id=653421381]
+script = ExtResource("1_fxg08")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1205380979]
+shape = SubResource("CircleShape2D_acvp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=912907136]
+texture = ExtResource("1_1aaqe")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615950682]
+libraries/ = SubResource("AnimationLibrary_f2lb2")
+
+[node name="Fade" type="Sprite2D" parent="." unique_id=478431436]
+visible = false
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(1000, 1000)
+texture = ExtResource("3_lm63c")

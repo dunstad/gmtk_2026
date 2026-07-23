@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://r0rvriv8buij"]
+
+[ext_resource type="PackedScene" uid="uid://blfmi8th0vvj2" path="res://assets/scenes/doodads/TimeBlock.tscn" id="1_sc3l3"]
+[ext_resource type="Script" uid="uid://ci4r56gm36wrr" path="res://assets/scripts/time_out_block.gd" id="2_6xyuc"]
+
+[sub_resource type="Animation" id="Animation_1167t"]
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6xyuc"]
+resource_name = "time_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.49803922), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ivklw"]
+resource_name = "time_out"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.49803922)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tgdnf"]
+_data = {
+&"RESET": SubResource("Animation_1167t"),
+&"time_in": SubResource("Animation_6xyuc"),
+&"time_out": SubResource("Animation_ivklw")
+}
+
+[node name="TimeOutBlock" unique_id=338073152 instance=ExtResource("1_sc3l3")]
+script = ExtResource("2_6xyuc")
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=581115316]
+libraries/ = SubResource("AnimationLibrary_tgdnf")

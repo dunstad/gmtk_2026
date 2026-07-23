@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="8"
-     inkscape:cx="115.9375"
-     inkscape:cy="46.1875"
+     inkscape:cx="216.1875"
+     inkscape:cy="-36.3125"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -45,6 +45,26 @@
        height="11.68358"
        x="12.699544"
        y="8.8050165" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4"
+       width="11.68358"
+       height="11.68358"
+       x="13.575932"
+       y="-13.866118"
+       inkscape:export-filename="rect1-4.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-8"
+       width="11.68358"
+       height="11.68358"
+       x="45.243748"
+       y="-13.758334"
+       inkscape:export-filename="rect1-4.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084" />
     <rect
        style="fill:#d9d9d9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
        id="rect1-8"
@@ -118,7 +138,10 @@
        width="0.58417904"
        height="1.1683581"
        x="28.764585"
-       y="9.2934895" />
+       y="9.2934895"
+       inkscape:export-filename="rect1-8-1-89-1.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084" />
     <rect
        style="fill:#bfbfbf;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
        id="rect1-8-1-4-3"
@@ -172,5 +195,17 @@
        id="rect1-8-1-2-0"
        style="fill:#bfbfbf;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
        d="m 29.932944,9.2934896 v 1.1684044 1.168404 h 0.583944 V 10.461894 9.2934896 Z" />
+    <rect
+       style="fill:#d9d9d9;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect2"
+       width="0.91268665"
+       height="10.592173"
+       x="59.266666"
+       y="-12.666926" />
+    <path
+       d="m 60.179354,-7.1410684 c 5.21859,-2.7967531 6.978491,3.110019 10.109436,0 l -1e-6,-4.7503816 H 60.179353 m 0,0 c 5.21859,-2.796754 6.978491,3.1100186 10.109436,0"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path1"
+       sodipodi:nodetypes="cccccc" />
   </g>
 </svg>
