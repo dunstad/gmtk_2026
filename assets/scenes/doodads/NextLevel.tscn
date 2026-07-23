@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://mmxpnx20bo23"]
 
-[ext_resource type="Texture2D" uid="uid://xfv4yq8ry1mx" path="res://assets/art/rect2.png" id="1_1aaqe"]
 [ext_resource type="Script" uid="uid://bk7hb7gyu3ab2" path="res://assets/scripts/next_level.gd" id="1_fxg08"]
+[ext_resource type="Material" uid="uid://bj4sh784lyd74" path="res://assets/art/flag_material.tres" id="3_f2lb2"]
 [ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="3_lm63c"]
+[ext_resource type="Texture2D" uid="uid://dcruwtxv1gqfq" path="res://assets/art/flag_straight.png" id="3_u8jqu"]
+[ext_resource type="Texture2D" uid="uid://d2aqfrscrsu5m" path="res://assets/art/flagpole_tall.png" id="4_8wlrb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_acvp6"]
 radius = 67.0
@@ -67,7 +69,11 @@ script = ExtResource("1_fxg08")
 shape = SubResource("CircleShape2D_acvp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=912907136]
-texture = ExtResource("1_1aaqe")
+material = ExtResource("3_f2lb2")
+texture = ExtResource("3_u8jqu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1519271561]
+texture = ExtResource("4_8wlrb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1615950682]
 libraries/ = SubResource("AnimationLibrary_f2lb2")
