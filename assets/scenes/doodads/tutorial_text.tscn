@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://ne2j436712jx"]
+
+[node name="TutorialText" type="RichTextLabel" unique_id=1355908254]
+modulate = Color(0.5376, 0.62328, 0.84, 1)
+clip_contents = false
+offset_left = -164.0
+offset_top = -690.0
+offset_right = 1436.0
+offset_bottom = 590.0
+theme_override_font_sizes/normal_font_size = 87
+text = "Use A and D or left stick to move.
+Touch the flag to win!"
+horizontal_alignment = 1

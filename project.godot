@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="GMTK2026"
+config/name="TIMELINE"
 run/main_scene="uid://gqbd4w3fayv6"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"

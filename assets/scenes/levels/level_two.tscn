@@ -1,20 +1,25 @@
 [gd_scene format=4 uid="uid://bvxtwhb3n4mpi"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_vqiq6"]
-[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_jf2j6"]
-[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="3_3cg21"]
+[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/tutorial_text.tscn" id="2_rvodm"]
 [ext_resource type="PackedScene" uid="uid://mmxpnx20bo23" path="res://assets/scenes/doodads/NextLevel.tscn" id="4_jorsp"]
+[ext_resource type="PackedScene" uid="uid://dqokjq2vyojm3" path="res://assets/scenes/levels/level_three.tscn" id="4_vqiq6"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_vqiq6")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAALAAAAAAABAAAAAAAMAAAAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAABAAMAAAAFAAAAAAABAAIAAAAGAAAAAAABAAMAAAAHAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAD+//7/AAADAAAAAAD+////AAADAAEAAAD+/wAAAAAAAAIAAAAEAP//AAADAAAAAAA=")
 
-[node name="TimeOutBlock" parent="." index="4" unique_id=338073152 instance=ExtResource("2_jf2j6")]
-position = Vector2(640, -256)
+[node name="Camera2D" parent="." index="2" unique_id=1909339084]
+position = Vector2(636, -208)
 
-[node name="TimeInBlock" parent="." index="5" unique_id=1143183206 instance=ExtResource("3_3cg21")]
-position = Vector2(256, -128)
+[node name="TutorialText" parent="Camera2D" index="1" unique_id=1355908254 instance=ExtResource("2_rvodm")]
+offset_left = -813.0
+offset_top = -480.0
+offset_right = 787.0
+offset_bottom = 800.0
+text = "Press Space or the A button to jump."
 
-[node name="NextLevel" parent="." index="6" unique_id=653421381 instance=ExtResource("4_jorsp")]
+[node name="NextLevel" parent="." index="4" unique_id=653421381 instance=ExtResource("4_jorsp")]
 position = Vector2(1231, -72)
+next_scene = ExtResource("4_vqiq6")

@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dn2x0h41cwamj" path="res://assets/scenes/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_pph4s"]
 [ext_resource type="PackedScene" uid="uid://lrdokrwano6q" path="res://assets/scenes/scenes/windows/main_menu_options_window.tscn" id="3_qnwls"]
 [ext_resource type="PackedScene" uid="uid://bltcsnwggy656" path="res://assets/scenes/scenes/windows/main_menu_credits_window.tscn" id="4_tmvcl"]
+[ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="5_pph4s"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -331,10 +332,14 @@ parameters/conditions/intro_done = false
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
-text = "GMTK2026"
+text = "TIMELINE
+"
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
+text = "GMTK 2026"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)
@@ -357,3 +362,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
+
+[node name="Background" type="Node2D" parent="." index="7" unique_id=1675079747]
+position = Vector2(149, -62)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" index="0" unique_id=206740806]
+modulate = Color(0.08000007, 0, 0.3, 1)
+z_index = -10
+texture = ExtResource("5_pph4s")
