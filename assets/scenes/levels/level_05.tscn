@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dubd3wyyvlnep"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_ce8n6"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_jws6d"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ce8n6")]
+
+[node name="TimeOutBlock" parent="." index="5" unique_id=338073152 instance=ExtResource("2_jws6d")]
+position = Vector2(512, -128)
+
+[node name="TimeOutBlock2" parent="." index="6" unique_id=1581073078 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_jws6d")]
+position = Vector2(640, -256)
+relative_time = NodePath("../TimeOutBlock")
+
+[node name="TimeOutBlock3" parent="." index="7" unique_id=87825422 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_jws6d")]
+position = Vector2(768, -384)
+relative_time = NodePath("../TimeOutBlock2")
