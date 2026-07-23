@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @onready var coyote_timer = $CoyoteTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
-@onready var jump_trojectory_line = $JumpTrojectoryLine
+@onready var jump_trajectory_line = $JumptrajectoryLine
 
 
 @export_group("Movement")
@@ -43,9 +43,11 @@ extends CharacterBody2D
 ## Determains the minumum jump heighet a player can reach if they barely tap the jump button (and variable_jump_height is true)
 @export var minimum_jump_height := -100
 
-@export_group("Jump Trojectory")
-## Maximum amount of points used to visualize player's jump trojectory (WiP)
-@export var max_trojectory_ponints := 100
+@export_group("Jump Trajectory")
+## Maximum amount of points used to visualize player's jump trajectory (WiP)
+@export var max_trajectory_ponints := 100
+
+@export var can_add_time := false
 
 
 @onready var jump_velocity : float = (2.0 * jump_height) / jump_time_to_peak * -1
@@ -82,21 +84,21 @@ func _get_movement(fric: float, accel: float, delta: float):
 			velocity.x = maxf(abs(velocity.x), abs(min_speed * sign(direction))) * sign(direction)
 
 
-# A way to visialize the players jump trojectory in real time (WiP)
-func _projected_jump_trojectory(_delta, direction):
-	var max_points = max_trojectory_ponints
+# A way to visialize the players jump trajectory in real time (WiP)
+func _projected_jump_trajectory(_delta, direction):
+	var max_points = max_trajectory_ponints
 	
-	jump_trojectory_line.clear_points()
+	jump_trajectory_line.clear_points()
 	var pos := Vector2.ZERO
 	var vel := Vector2(max_speed * direction, jump_velocity)
 	for point in max_points:
-		jump_trojectory_line.add_point(pos)
+		jump_trajectory_line.add_point(pos)
 		vel.y += _get_gravity(vel) * _delta
 		pos += vel * _delta
 
 
 # Flips the player sprite depending on their movemnt direction
-func _set_sprite_direction(direction: int) -> void:
+func _set_sprite_direction(direction: int):
 	if direction > 0.0:
 		$AnimatedSprite2D.flip_h = true
 
@@ -117,6 +119,9 @@ func _physics_process(delta):
 		_get_movement(friction, acceleration, delta)
 	
 	_set_sprite_direction(sign(velocity.x))
+
+	if can_add_time and Input.is_action_just_pressed("Add_Time"):
+		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)
 	
 	if Input.is_action_just_pressed("Jump"):
 		jump()
@@ -130,7 +135,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("idle")
 		
 #	if Input.is_action_just_pressed("Preview_Jump"):
-#		_projected_jump_trojectory(delta, sign(velocity.x))
+#		_projected_jump_trajectory(delta, sign(velocity.x))
 	
 	move_and_slide()
 

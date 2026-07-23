@@ -46,10 +46,9 @@ script = ExtResource("1_s31jt")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1915863219]
 clip_contents = false
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(3.2, 3.2)
-theme_override_font_sizes/normal_font_size = 22
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_font_sizes/normal_font_size = 87
 text = "-88"
 horizontal_alignment = 1
 vertical_alignment = 1

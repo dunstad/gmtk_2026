@@ -31,7 +31,6 @@ animations = [{
 points = PackedVector2Array(62, -63, 62, 53, 53, 61, -53, 61, -62, 53, -62, -63)
 
 [node name="Player" type="CharacterBody2D" unique_id=840063268]
-position = Vector2(0, -9)
 script = ExtResource("1_4w2it")
 max_speed = 700.0
 air_acceleration = 100.0
@@ -40,7 +39,7 @@ jump_height = 150
 jump_time_to_peak = 0.2
 jump_time_to_descent = 0.2
 
-[node name="JumpTrojectoryLine" type="Line2D" parent="." unique_id=528940680]
+[node name="JumpTrajectoryLine" type="Line2D" parent="." unique_id=528940680]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=726782888]
 visible = false
