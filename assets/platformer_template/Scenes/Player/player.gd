@@ -132,6 +132,10 @@ func _physics_process(delta):
 
 	if can_add_time and Input.is_action_just_pressed("Add_Time"):
 		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)
+		var time_particles = $SpriteOrigin/Sprite2D/TimeParticles.duplicate()
+		time_particles.global_position = $SpriteOrigin/Sprite2D/TimeParticles.global_position
+		get_parent().add_child(time_particles)
+		time_particles.emitting = true
 
 	if Input.is_action_just_pressed("Restart"):
 		restart()
@@ -143,9 +147,15 @@ func _physics_process(delta):
 		jump_cut()
 	
 	if velocity != Vector2.ZERO:
+		print(velocity)
 		$AnimatedSprite2D.play("walk")
+		if $Grounded.is_colliding():
+			$SpriteOrigin/Sprite2D/WalkParticles.emitting = true
+		else:
+			$SpriteOrigin/Sprite2D/WalkParticles.emitting = false
 	else:
 		$AnimatedSprite2D.play("idle")
+		$SpriteOrigin/Sprite2D/WalkParticles.emitting = false
 		
 #	if Input.is_action_just_pressed("Preview_Jump"):
 #		_projected_jump_trajectory(delta, sign(velocity.x))
