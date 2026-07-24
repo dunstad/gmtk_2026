@@ -60,6 +60,7 @@ func _ready():
 	coyote_timer.wait_time = coyote_timer_value
 	jump_buffer_timer.wait_time = jump_buffer_timer_value
 	start_pos = global_position
+	$BlinkPlayer.play("blink")
 
 
 # Sets the gravity depending on the context
@@ -102,11 +103,11 @@ func _projected_jump_trajectory(_delta, direction):
 # Flips the player sprite depending on their movemnt direction
 func _set_sprite_direction(direction: int):
 	if direction > 0.0:
-		$Sprite2D.scale.x  = abs($Sprite2D.scale.x)
+		$SpriteOrigin/Sprite2D.scale.x  = abs($SpriteOrigin/Sprite2D.scale.x)
 		$AnimatedSprite2D.flip_h = true
 
 	if direction < 0.0:
-		$Sprite2D.scale.x  = -abs($Sprite2D.scale.x)
+		$SpriteOrigin/Sprite2D.scale.x  = -abs($SpriteOrigin/Sprite2D.scale.x)
 		$AnimatedSprite2D.flip_h = false
 
 
@@ -125,9 +126,9 @@ func _physics_process(delta):
 	_set_sprite_direction(sign(velocity.x))
 
 	if can_add_time:
-		$Sprite2D/ClockSprite.visible = true
+		$SpriteOrigin/Sprite2D/ClockSprite.visible = true
 	else:
-		$Sprite2D/ClockSprite.visible = false
+		$SpriteOrigin/Sprite2D/ClockSprite.visible = false
 
 	if can_add_time and Input.is_action_just_pressed("Add_Time"):
 		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)
@@ -158,6 +159,7 @@ func restart():
 
 # Adds the player's jump velocity if able
 func jump():
+	$JumpPlayer.play("jump")
 	if coyote_timer.time_left > 0.0:
 		coyote_timer.stop()
 		velocity.y = jump_velocity

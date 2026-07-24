@@ -32,6 +32,105 @@ animations = [{
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_rrwe6"]
 points = PackedVector2Array(62, -63, 62, 53, 53, 61, -53, 61, -62, 53, -62, -63)
 
+[sub_resource type="Animation" id="Animation_xjwqw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_4vtr2"]
+resource_name = "blink"
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0r3ur"]
+_data = {
+&"RESET": SubResource("Animation_xjwqw"),
+&"blink": SubResource("Animation_4vtr2")
+}
+
+[sub_resource type="Animation" id="Animation_3r2ih"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpriteOrigin:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_0r3ur"]
+resource_name = "jump"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpriteOrigin:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3r2ih"]
+_data = {
+&"RESET": SubResource("Animation_3r2ih"),
+&"jump": SubResource("Animation_0r3ur")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=840063268]
 script = ExtResource("1_4w2it")
 max_speed = 700.0
@@ -63,51 +162,102 @@ one_shot = true
 wait_time = 0.1
 one_shot = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1804610139]
+[node name="SpriteOrigin" type="Node2D" parent="." unique_id=569834259]
+position = Vector2(0, 62)
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteOrigin" unique_id=1804610139]
+position = Vector2(0, -61.999996)
 scale = Vector2(0.975, 0.975)
 texture = ExtResource("4_a75qg")
 
-[node name="Eyes" type="Node2D" parent="Sprite2D" unique_id=4873672]
+[node name="Eyes" type="Node2D" parent="SpriteOrigin/Sprite2D" unique_id=4873672]
 z_index = 1
 position = Vector2(21.538465, -10.256413)
 scale = Vector2(1.4708711, 1.4708711)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1134473389]
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes" unique_id=1134473389]
 self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
 position = Vector2(-18.000004, 4.0000076)
 scale = Vector2(0.23350233, 0.23350233)
 texture = ExtResource("5_xjwqw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D2" unique_id=1676315253]
+[node name="Sprite2D" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes/Sprite2D2" unique_id=1676315253]
 position = Vector2(23.33411, -23.10302)
 scale = Vector2(0.5118776, 0.5118776)
 texture = ExtResource("5_xjwqw")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D2" unique_id=2061055053]
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes/Sprite2D2" unique_id=2061055053]
 visible = false
 position = Vector2(-27.432537, 39.60872)
 scale = Vector2(0.2950748, 0.2950748)
 texture = ExtResource("5_xjwqw")
 
-[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1228836362]
+[node name="Sprite2D3" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes" unique_id=1228836362]
 self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
 position = Vector2(17, 4)
 scale = Vector2(0.19350234, 0.23350233)
 texture = ExtResource("5_xjwqw")
 
-[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D3" unique_id=1126744134]
+[node name="Sprite2D" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes/Sprite2D3" unique_id=1126744134]
 position = Vector2(23.33411, -23.10302)
 scale = Vector2(0.5118776, 0.5118776)
 texture = ExtResource("5_xjwqw")
 
-[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D3" unique_id=1671717456]
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/Eyes/Sprite2D3" unique_id=1671717456]
 visible = false
 position = Vector2(-27.432537, 39.60872)
 scale = Vector2(0.2950748, 0.2950748)
 texture = ExtResource("5_xjwqw")
 
-[node name="ClockSprite" type="Sprite2D" parent="Sprite2D" unique_id=1239557398]
+[node name="ClosedEyes" type="Node2D" parent="SpriteOrigin/Sprite2D" unique_id=91065064]
+position = Vector2(20.512821, -10.25641)
+scale = Vector2(1.4298456, 0.4452303)
+
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes" unique_id=200731649]
+self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
+position = Vector2(-18.000004, 4.0000076)
+scale = Vector2(0.23350233, 0.23350233)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes/Sprite2D2" unique_id=2079477443]
+visible = false
+position = Vector2(23.33411, -23.10302)
+scale = Vector2(0.5118776, 0.5118776)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes/Sprite2D2" unique_id=619049060]
+visible = false
+position = Vector2(-27.432537, 39.60872)
+scale = Vector2(0.2950748, 0.2950748)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes" unique_id=367175082]
+self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
+position = Vector2(18, 4)
+scale = Vector2(0.19350234, 0.23350233)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes/Sprite2D3" unique_id=1473965678]
+visible = false
+position = Vector2(23.33411, -23.10302)
+scale = Vector2(0.5118776, 0.5118776)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteOrigin/Sprite2D/ClosedEyes/Sprite2D3" unique_id=421829797]
+visible = false
+position = Vector2(-27.432537, 39.60872)
+scale = Vector2(0.2950748, 0.2950748)
+texture = ExtResource("5_xjwqw")
+
+[node name="ClockSprite" type="Sprite2D" parent="SpriteOrigin/Sprite2D" unique_id=1239557398]
 position = Vector2(-51.282047, 25.64103)
 rotation = 0.49218288
 scale = Vector2(0.3484711, 0.3484711)
 texture = ExtResource("6_xjwqw")
+
+[node name="BlinkPlayer" type="AnimationPlayer" parent="." unique_id=1280581479]
+libraries/ = SubResource("AnimationLibrary_0r3ur")
+
+[node name="JumpPlayer" type="AnimationPlayer" parent="." unique_id=462342992]
+root_node = NodePath("../BlinkPlayer")
+libraries/ = SubResource("AnimationLibrary_3r2ih")
