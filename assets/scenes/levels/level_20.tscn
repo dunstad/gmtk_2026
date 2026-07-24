@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_nibn4"]
 [ext_resource type="PackedScene" uid="uid://c5fj54jq0f3cb" path="res://assets/scenes/doodads/TimeOutBlockEvenHoriz.tscn" id="2_lgb2e"]
+[ext_resource type="PackedScene" uid="uid://cpbef5tubrkti" path="res://assets/scenes/levels/level_21.tscn" id="2_x0hkn"]
 [ext_resource type="PackedScene" uid="uid://d118m21rot85x" path="res://assets/scenes/doodads/TimeInBlockEvenHoriz.tscn" id="3_k1slp"]
 [ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="4_6vgts"]
 
@@ -12,6 +13,9 @@ tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAABAAM
 
 [node name="Player" parent="." index="1" unique_id=347908142]
 position = Vector2(0, -768)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+next_scene = ExtResource("2_x0hkn")
 
 [node name="TimeOutBlockEvenHoriz" parent="." index="6" unique_id=338073152 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_lgb2e")]
 position = Vector2(128, 0)

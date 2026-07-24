@@ -1,0 +1,57 @@
+[gd_scene format=4 uid="uid://badgdpswojp1e"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_rwsw1"]
+[ext_resource type="PackedScene" uid="uid://hecks1e6igvf" path="res://assets/scenes/doodads/TimeOutBlockEvenVert.tscn" id="2_km4fm"]
+[ext_resource type="PackedScene" uid="uid://di1wd50tb3fsq" path="res://assets/scenes/levels/level_23.tscn" id="2_lhngp"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="3_thjh6"]
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="4_thjh6"]
+[ext_resource type="PackedScene" uid="uid://c5fj54jq0f3cb" path="res://assets/scenes/doodads/TimeOutBlockEvenHoriz.tscn" id="5_5vtmx"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_rwsw1")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAAAAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAAIAPn/AAADAAAAAAAIAPr/AAADAAEAAAAIAPv/AAADAAEAAAAIAPz/AAADAAEAAAAIAP3/AAADAAIAAAAGAP3/AAADAAEAAAAGAP7/AAADAAEAAAAGAP//AAADAAIAAAAGAPv/AAADAAAAAAAGAPz/AAADAAEAAAA=")
+
+[node name="Player" parent="." index="1" unique_id=347908142]
+position = Vector2(-128, -768)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1280, 0)
+next_scene = ExtResource("2_lhngp")
+
+[node name="TimeOutBlockEvenHoriz" parent="." index="6" unique_id=1433198980 node_paths=PackedStringArray("relative_time") instance=ExtResource("5_5vtmx")]
+position = Vector2(896, 0)
+relative_time = NodePath("../TimeInBlock")
+seconds_remaining = -2
+
+[node name="TimeOutBlockEvenHoriz2" parent="." index="7" unique_id=338073152 instance=ExtResource("5_5vtmx")]
+position = Vector2(-256, -640)
+
+[node name="TimeOutBlockEvenVert" parent="." index="8" unique_id=1438743837 instance=ExtResource("2_km4fm")]
+position = Vector2(0, -768)
+
+[node name="TileMapLayer" parent="TimeOutBlockEvenVert" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAP//AAADAAEAAAAAAP7/AAADAAAAAAAAAAEAAAADAAIAAAA=")
+
+[node name="TimeOutBlockEvenHoriz3" parent="." index="9" unique_id=1035739426 instance=ExtResource("5_5vtmx")]
+position = Vector2(128, -640)
+
+[node name="TimeOutBlockEvenHoriz4" parent="." index="10" unique_id=1109829539 instance=ExtResource("5_5vtmx")]
+position = Vector2(512, -640)
+
+[node name="TimeOutBlockEvenVert2" parent="." index="11" unique_id=1485733244 instance=ExtResource("2_km4fm")]
+position = Vector2(384, -768)
+
+[node name="TileMapLayer" parent="TimeOutBlockEvenVert2" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAP//AAADAAEAAAAAAP7/AAADAAAAAAAAAAEAAAADAAIAAAA=")
+
+[node name="TimeOutBlock" parent="." index="12" unique_id=948705703 instance=ExtResource("3_thjh6")]
+position = Vector2(896, -768)
+
+[node name="TimeInBlock" parent="." index="13" unique_id=609383515 node_paths=PackedStringArray("relative_time") instance=ExtResource("4_thjh6")]
+position = Vector2(896, -640)
+relative_time = NodePath("../TimeOutBlock")
+seconds_remaining = 0
+
+[editable path="TimeOutBlockEvenVert"]
+[editable path="TimeOutBlockEvenVert2"]

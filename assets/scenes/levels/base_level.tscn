@@ -24,6 +24,7 @@ position = Vector2(653, -309)
 zoom = Vector2(0.59, 0.59)
 
 [node name="LevelTimer" type="Node2D" parent="Camera2D" unique_id=1222551870 groups=["LevelTimer"]]
+visible = false
 position = Vector2(831, -401)
 script = ExtResource("3_okpoa")
 
