@@ -147,7 +147,7 @@ func _physics_process(delta):
 		jump_cut()
 	
 	if velocity != Vector2.ZERO:
-		print(velocity)
+		# print(velocity)
 		$AnimatedSprite2D.play("walk")
 		if $Grounded.is_colliding():
 			$SpriteOrigin/Sprite2D/WalkParticles.emitting = true

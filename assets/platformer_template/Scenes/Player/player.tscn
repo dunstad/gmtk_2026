@@ -289,7 +289,7 @@ texture = ExtResource("6_xjwqw")
 
 [node name="TimeParticles" type="GPUParticles2D" parent="SpriteOrigin/Sprite2D" unique_id=900689456]
 z_index = -1
-position = Vector2(-52.307697, 27.692307)
+position = Vector2(-52.30769, 27.6923)
 scale = Vector2(1.0256412, 1.0256412)
 emitting = false
 amount = 6

@@ -5,9 +5,30 @@
 [ext_resource type="Script" uid="uid://c8qeg24x1jukp" path="res://assets/scripts/level_timer.gd" id="3_okpoa"]
 [ext_resource type="Texture2D" uid="uid://b8lyumi3caqqe" path="res://assets/art/clock_without_hands_lighter.png" id="4_1onrq"]
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="4_tf2qc"]
+[ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="5_q243q"]
 [ext_resource type="PackedScene" uid="uid://mmxpnx20bo23" path="res://assets/scenes/doodads/NextLevel.tscn" id="6_we6oa"]
 [ext_resource type="PackedScene" uid="uid://o0tnxlpmm0c" path="res://assets/scenes/scenes/end_credits/end_credits.tscn" id="7_xefct"]
 [ext_resource type="PackedScene" uid="uid://bv1psa8ebdb5f" path="res://assets/scenes/doodads/RestartArea.tscn" id="8_xefct"]
+
+[sub_resource type="Curve" id="Curve_s1nxx"]
+_data = [Vector2(0, 1), 0.0, -0.47865152, 0, 0, Vector2(1, 0), -2.0608616, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0r3ur"]
+curve = SubResource("Curve_s1nxx")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4opws"]
+particle_flag_disable_z = true
+initial_velocity_min = 12.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+use_scale_3d = true
+scale_3d_min = Vector3(0.2, 0.3, 0.5)
+scale_3d_max = Vector3(1, 1.5, 1)
+scale_min = 0.19999999
+scale_max = 0.19999999
+scale_curve = SubResource("CurveTexture_0r3ur")
+color = Color(1, 0.6392157, 0, 0.1254902)
 
 [node name="BaseLevel" type="Node2D" unique_id=1904546924]
 
@@ -48,6 +69,42 @@ z_index = -1
 position = Vector2(35, -30)
 scale = Vector2(0.93, 0.93)
 texture = ExtResource("4_1onrq")
+
+[node name="TimeParticles" type="GPUParticles2D" parent="Camera2D" unique_id=1168465797]
+z_index = -1
+position = Vector2(-1037, -587)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("5_q243q")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_4opws")
+
+[node name="TimeParticles2" type="GPUParticles2D" parent="Camera2D" unique_id=702436070]
+z_index = -1
+position = Vector2(-1036.9999, 53.000008)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("5_q243q")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_4opws")
+
+[node name="TimeParticles3" type="GPUParticles2D" parent="Camera2D" unique_id=1463182641]
+z_index = -1
+position = Vector2(-1036.9999, 565.00006)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("5_q243q")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_4opws")
 
 [node name="Background" type="Node2D" parent="." unique_id=2008904633]
 
