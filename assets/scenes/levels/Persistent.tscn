@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cdvec7njndv5v"]
+
+[ext_resource type="Script" uid="uid://cqi3jllppv5i2" path="res://assets/scripts/persistent.gd" id="1_1p338"]
+[ext_resource type="PackedScene" uid="uid://gqbd4w3fayv6" path="res://assets/scenes/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_udwek"]
+
+[node name="Persistent" type="Node" unique_id=1823964707]
+script = ExtResource("1_1p338")
+child_scene = ExtResource("2_udwek")
