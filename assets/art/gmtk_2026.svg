@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="11.313708"
-     inkscape:cx="495.54927"
-     inkscape:cy="70.754872"
+     inkscape:zoom="5.656854"
+     inkscape:cx="-12.109204"
+     inkscape:cy="-11.225321"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -4830,6 +4830,17 @@
        inkscape:export-ydpi="278.27084" />
     <rect
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82"
+       width="11.68358"
+       height="11.68358"
+       x="-16.404167"
+       y="-12.964583"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
        id="rect1-4-8"
        width="11.68358"
        height="11.68358"
@@ -8088,5 +8099,14 @@
          rx="0.92802584"
          ry="0.55464435" />
     </g>
+    <circle
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path2"
+       cx="4.5196238"
+       cy="-7.1410685"
+       r="5.8417907"
+       inkscape:export-filename="circle.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084" />
   </g>
 </svg>

@@ -102,9 +102,11 @@ func _projected_jump_trajectory(_delta, direction):
 # Flips the player sprite depending on their movemnt direction
 func _set_sprite_direction(direction: int):
 	if direction > 0.0:
+		$Sprite2D.scale.x  = abs($Sprite2D.scale.x)
 		$AnimatedSprite2D.flip_h = true
 
 	if direction < 0.0:
+		$Sprite2D.scale.x  = -abs($Sprite2D.scale.x)
 		$AnimatedSprite2D.flip_h = false
 
 
@@ -121,6 +123,11 @@ func _physics_process(delta):
 		_get_movement(friction, acceleration, delta)
 	
 	_set_sprite_direction(sign(velocity.x))
+
+	if can_add_time:
+		$Sprite2D/ClockSprite.visible = true
+	else:
+		$Sprite2D/ClockSprite.visible = false
 
 	if can_add_time and Input.is_action_just_pressed("Add_Time"):
 		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)

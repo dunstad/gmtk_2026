@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://b7qxb3kl3cv1n" path="res://assets/platformer_template/Scenes/Player/player.gd" id="1_4w2it"]
 [ext_resource type="Texture2D" uid="uid://vympwop2vhxc" path="res://assets/platformer_template/Assets/Characters/character_0000.png" id="2_yut0r"]
 [ext_resource type="Texture2D" uid="uid://bryvnrjngs5y5" path="res://assets/platformer_template/Assets/Characters/character_0001.png" id="3_wesdm"]
-[ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="4_rrwe6"]
+[ext_resource type="Texture2D" uid="uid://c4pkcygfiyu1a" path="res://assets/art/rounded_square.png" id="4_a75qg"]
+[ext_resource type="Texture2D" uid="uid://bj08d3i6bxyl4" path="res://assets/art/circle.png" id="5_xjwqw"]
+[ext_resource type="Texture2D" uid="uid://cprn1a1tbk6ec" path="res://assets/art/clock_with_hands_orange.png" id="6_xjwqw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5h3j6"]
 animations = [{
@@ -63,4 +65,49 @@ one_shot = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1804610139]
 scale = Vector2(0.975, 0.975)
-texture = ExtResource("4_rrwe6")
+texture = ExtResource("4_a75qg")
+
+[node name="Eyes" type="Node2D" parent="Sprite2D" unique_id=4873672]
+z_index = 1
+position = Vector2(21.538465, -10.256413)
+scale = Vector2(1.4708711, 1.4708711)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1134473389]
+self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
+position = Vector2(-18.000004, 4.0000076)
+scale = Vector2(0.23350233, 0.23350233)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D2" unique_id=1676315253]
+position = Vector2(23.33411, -23.10302)
+scale = Vector2(0.5118776, 0.5118776)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D2" unique_id=2061055053]
+visible = false
+position = Vector2(-27.432537, 39.60872)
+scale = Vector2(0.2950748, 0.2950748)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Eyes" unique_id=1228836362]
+self_modulate = Color(0.24951404, 0.00020763605, 0.7658345, 1)
+position = Vector2(17, 4)
+scale = Vector2(0.19350234, 0.23350233)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D3" unique_id=1126744134]
+position = Vector2(23.33411, -23.10302)
+scale = Vector2(0.5118776, 0.5118776)
+texture = ExtResource("5_xjwqw")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Eyes/Sprite2D3" unique_id=1671717456]
+visible = false
+position = Vector2(-27.432537, 39.60872)
+scale = Vector2(0.2950748, 0.2950748)
+texture = ExtResource("5_xjwqw")
+
+[node name="ClockSprite" type="Sprite2D" parent="Sprite2D" unique_id=1239557398]
+position = Vector2(-51.282047, 25.64103)
+rotation = 0.49218288
+scale = Vector2(0.3484711, 0.3484711)
+texture = ExtResource("6_xjwqw")

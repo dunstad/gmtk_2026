@@ -76,6 +76,7 @@ texture = ExtResource("3_u8jqu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1519271561]
 modulate = Color(1, 0.6392157, 0, 1)
+z_index = -1
 position = Vector2(64, -72.5)
 texture = ExtResource("4_8wlrb")
 
@@ -85,5 +86,6 @@ libraries/ = SubResource("AnimationLibrary_f2lb2")
 [node name="Fade" type="Sprite2D" parent="." unique_id=478431436]
 visible = false
 modulate = Color(0, 0, 0, 1)
+z_index = 10
 scale = Vector2(1000, 1000)
 texture = ExtResource("3_lm63c")
