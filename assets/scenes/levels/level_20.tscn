@@ -1,0 +1,28 @@
+[gd_scene format=4 uid="uid://cb0qrpwnatk76"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_nibn4"]
+[ext_resource type="PackedScene" uid="uid://c5fj54jq0f3cb" path="res://assets/scenes/doodads/TimeOutBlockEvenHoriz.tscn" id="2_lgb2e"]
+[ext_resource type="PackedScene" uid="uid://d118m21rot85x" path="res://assets/scenes/doodads/TimeInBlockEvenHoriz.tscn" id="3_k1slp"]
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="4_6vgts"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_nibn4")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAAIAAAAAAABAAMAAAD///v/AAAAAAMAAAAAAPv/AAACAAMAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAIAAAA=")
+
+[node name="Player" parent="." index="1" unique_id=347908142]
+position = Vector2(0, -768)
+
+[node name="TimeOutBlockEvenHoriz" parent="." index="6" unique_id=338073152 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_lgb2e")]
+position = Vector2(128, 0)
+relative_time = NodePath("../TimeInBlockEvenHoriz")
+seconds_remaining = -2
+
+[node name="TimeInBlockEvenHoriz" parent="." index="7" unique_id=1143183206 instance=ExtResource("3_k1slp")]
+position = Vector2(128, -640)
+seconds_remaining = 0
+
+[node name="TimeInBlock" parent="." index="8" unique_id=1844541193 node_paths=PackedStringArray("relative_time") instance=ExtResource("4_6vgts")]
+position = Vector2(640, 0)
+relative_time = NodePath("../TimeOutBlockEvenHoriz")
+seconds_remaining = 0
