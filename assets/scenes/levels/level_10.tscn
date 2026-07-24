@@ -55,7 +55,7 @@ next_scene = ExtResource("2_2p5d7")
 
 [node name="TimeOutBlock" parent="." index="6" unique_id=338073152 instance=ExtResource("2_i0epw")]
 position = Vector2(384, 0)
-seconds_remaining = 0
+seconds_remaining = 1
 
 [node name="TimeOutBlock2" parent="." index="7" unique_id=985039072 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_i0epw")]
 position = Vector2(512, 0)

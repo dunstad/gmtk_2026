@@ -1,0 +1,82 @@
+[gd_scene format=4 uid="uid://b4sn4cj5gyty7"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_ak3ib"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_gg06s"]
+[ext_resource type="PackedScene" uid="uid://bpmfn86rmvihj" path="res://assets/scenes/levels/level_18.tscn" id="2_uoex3"]
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="3_uoex3"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ak3ib")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+next_scene = ExtResource("2_uoex3")
+
+[node name="TimeOutLeavingUp" type="Node2D" parent="." index="6" unique_id=1362982585]
+position = Vector2(640, 0)
+
+[node name="TimeOutBlock" parent="TimeOutLeavingUp" index="0" unique_id=338073152 instance=ExtResource("2_gg06s")]
+position = Vector2(0, -128)
+seconds_remaining = 1
+
+[node name="TimeOutBlock2" parent="TimeOutLeavingUp" index="1" unique_id=1896670228 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_gg06s")]
+position = Vector2(0, -256)
+relative_time = NodePath("../TimeOutBlock")
+seconds_remaining = 1
+
+[node name="TimeOutBlock3" parent="TimeOutLeavingUp" index="2" unique_id=1720684252 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_gg06s")]
+position = Vector2(0, -384)
+relative_time = NodePath("../TimeOutBlock2")
+seconds_remaining = 1
+
+[node name="TimeOutLeavingDown" type="Node2D" parent="." index="7" unique_id=1007429617]
+position = Vector2(896, 0)
+
+[node name="TimeOutBlock" parent="TimeOutLeavingDown" index="0" unique_id=2054521205 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_gg06s")]
+position = Vector2(0, -128)
+relative_time = NodePath("../TimeOutBlock2")
+seconds_remaining = 1
+
+[node name="TimeOutBlock2" parent="TimeOutLeavingDown" index="1" unique_id=911972221 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_gg06s")]
+position = Vector2(0, -256)
+relative_time = NodePath("../TimeOutBlock3")
+seconds_remaining = 1
+
+[node name="TimeOutBlock3" parent="TimeOutLeavingDown" index="2" unique_id=919353053 instance=ExtResource("2_gg06s")]
+position = Vector2(0, -384)
+seconds_remaining = 1
+
+[node name="TimeInComingUp" type="Node2D" parent="." index="8" unique_id=1864845694]
+position = Vector2(128, 0)
+
+[node name="TimeInBlock" parent="TimeInComingUp" index="0" unique_id=1143183206 instance=ExtResource("3_uoex3")]
+position = Vector2(0, -128)
+seconds_remaining = 1
+
+[node name="TimeInBlock2" parent="TimeInComingUp" index="1" unique_id=341951320 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_uoex3")]
+position = Vector2(0, -256)
+relative_time = NodePath("../TimeInBlock")
+seconds_remaining = 1
+
+[node name="TimeInBlock3" parent="TimeInComingUp" index="2" unique_id=2014213089 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_uoex3")]
+position = Vector2(0, -384)
+relative_time = NodePath("../TimeInBlock2")
+seconds_remaining = 1
+
+[node name="TimeInComingDown" type="Node2D" parent="." index="9" unique_id=1855621528]
+position = Vector2(384, 0)
+
+[node name="TimeInBlock6" parent="TimeInComingDown" index="0" unique_id=58306886 instance=ExtResource("3_uoex3")]
+position = Vector2(0, -384)
+seconds_remaining = 1
+
+[node name="TimeInBlock5" parent="TimeInComingDown" index="1" unique_id=1732389889 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_uoex3")]
+position = Vector2(0, -256)
+relative_time = NodePath("../TimeInBlock6")
+seconds_remaining = 1
+
+[node name="TimeInBlock4" parent="TimeInComingDown" index="2" unique_id=1406318667 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_uoex3")]
+position = Vector2(0, -128)
+relative_time = NodePath("../TimeInBlock5")
+seconds_remaining = 1

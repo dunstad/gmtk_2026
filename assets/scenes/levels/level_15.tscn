@@ -1,11 +1,51 @@
 [gd_scene format=4 uid="uid://ceeitw1q505ul"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_8x83i"]
+[ext_resource type="PackedScene" uid="uid://dwo3ycgiuum86" path="res://assets/scenes/levels/level_16.tscn" id="2_fdec0"]
+[ext_resource type="PackedScene" uid="uid://d118m21rot85x" path="res://assets/scenes/doodads/TimeInBlockEvenHoriz.tscn" id="3_fdec0"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_8x83i")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
-tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAEAAAD+////AAADAAEAAAALAP7/AAADAAEAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAADAPv/AAAAAAAAAAAEAPv/AAABAAMAAAAFAPv/AAABAAMAAAAGAPv/AAABAAMAAAAHAPv/AAABAAMAAAAIAPv/AAACAAAAAAAIAPz/AAADAAEAAAAIAP3/AAADAAEAAAAIAP7/AAADAAEAAAAIAP//AAADAAEAAAAIAAAAAAAAAAIAAAALAP3/AAADAAEAAAALAPz/AAADAAEAAAALAPv/AAADAAAAAAACAAAAAAABAAMAAAADAAAAAAACAAIAAAADAP//AAADAAEAAAADAP7/AAADAAEAAAADAP3/AAADAAEAAAADAPz/AAADAAEAAAD+//3/AAADAAEAAAD+//z/AAADAAEAAAD+//v/AAADAAEAAAD+//r/AAADAAAAAAA=")
 
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 position = Vector2(1280, 0)
+next_scene = ExtResource("2_fdec0")
+
+[node name="TimeInBlockEvenHoriz3" parent="." index="6" unique_id=1143183206 instance=ExtResource("3_fdec0")]
+position = Vector2(128, -128)
+
+[node name="TimeInBlockEvenHoriz4" parent="." index="7" unique_id=1751550000 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(-128, -256)
+relative_time = NodePath("../TimeInBlockEvenHoriz3")
+seconds_remaining = 1
+
+[node name="TimeInBlockEvenHoriz5" parent="." index="8" unique_id=46732535 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(128, -384)
+relative_time = NodePath("../TimeInBlockEvenHoriz4")
+seconds_remaining = 1
+
+[node name="TimeInBlockEvenHoriz6" parent="." index="9" unique_id=1775269504 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(-128, -512)
+relative_time = NodePath("../TimeInBlockEvenHoriz5")
+seconds_remaining = 1
+
+[node name="TimeInBlockEvenHoriz7" parent="." index="10" unique_id=954021371 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(128, -640)
+relative_time = NodePath("../TimeInBlockEvenHoriz6")
+seconds_remaining = 1
+
+[node name="TimeInBlockEvenHoriz" parent="." index="11" unique_id=1412813226 instance=ExtResource("3_fdec0")]
+position = Vector2(1152, -640)
+seconds_remaining = 7
+
+[node name="TimeInBlockEvenHoriz2" parent="." index="12" unique_id=26600652 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(1152, -512)
+relative_time = NodePath("../TimeInBlockEvenHoriz")
+seconds_remaining = -1
+
+[node name="TimeInBlockEvenHoriz8" parent="." index="13" unique_id=1184217657 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_fdec0")]
+position = Vector2(1152, -384)
+relative_time = NodePath("../TimeInBlockEvenHoriz2")
+seconds_remaining = -1
