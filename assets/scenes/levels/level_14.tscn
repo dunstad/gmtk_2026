@@ -1,0 +1,30 @@
+[gd_scene format=4 uid="uid://dueqb2rhkftkm"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_0kc0l"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_sijau"]
+[ext_resource type="PackedScene" uid="uid://ceeitw1q505ul" path="res://assets/scenes/levels/level_15.tscn" id="2_yn55k"]
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="3_yn55k"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_0kc0l")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
+
+[node name="Player" parent="." index="1" unique_id=347908142]
+can_add_time = true
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1280, 0)
+next_scene = ExtResource("2_yn55k")
+
+[node name="TimeOutBlock" parent="." index="6" unique_id=338073152 instance=ExtResource("2_sijau")]
+position = Vector2(128, 0)
+
+[node name="TimeInBlock" parent="." index="7" unique_id=1143183206 instance=ExtResource("3_yn55k")]
+position = Vector2(384, 0)
+
+[node name="TimeOutBlock2" parent="." index="8" unique_id=134396873 instance=ExtResource("2_sijau")]
+position = Vector2(640, 0)
+
+[node name="TimeInBlock2" parent="." index="9" unique_id=1458208658 instance=ExtResource("3_yn55k")]
+position = Vector2(896, 0)

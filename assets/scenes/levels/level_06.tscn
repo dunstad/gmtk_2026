@@ -9,6 +9,9 @@
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
 
+[node name="Player" parent="." index="1" unique_id=347908142]
+can_add_time = false
+
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 next_scene = ExtResource("2_orih8")
 

@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="208.41972"
-     inkscape:cy="-21.743534"
+     inkscape:zoom="11.313708"
+     inkscape:cx="495.54927"
+     inkscape:cy="70.754872"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -7898,6 +7898,74 @@
        height="1.8061582"
        x="83.879951"
        y="-60.736317"
+       transform="rotate(45)" />
+    <circle
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path5376-8"
+       cx="139.59369"
+       cy="16.877604"
+       r="4.3916078"
+       inkscape:export-filename="clock_with_hands_orange.png"
+       inkscape:export-xdpi="370.16049"
+       inkscape:export-ydpi="370.16049" />
+    <circle
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path5376-4-2"
+       cx="139.59369"
+       cy="16.877604"
+       r="3.6198666" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5376-4"
+       width="0.90842605"
+       height="1.0018017"
+       x="139.13948"
+       y="11.516376" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5376-5-5"
+       width="1.0847515"
+       height="1.1962514"
+       x="110.06898"
+       y="-92.079315"
+       transform="rotate(45)"
+       ry="0.28977445" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5376-5-6-5"
+       width="1.0968827"
+       height="1.2096295"
+       x="-87.358299"
+       y="105.34289"
+       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"
+       ry="0.32473266" />
+    <ellipse
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path5377-1"
+       cx="139.59369"
+       cy="11.667145"
+       rx="0.92802584"
+       ry="0.55464435" />
+    <circle
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="path5378-7"
+       cx="139.59369"
+       cy="16.877604"
+       r="0.3358101" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5378-1"
+       width="0.2994568"
+       height="2.9673944"
+       x="139.44005"
+       y="13.910212" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect5378-9-1"
+       width="0.2994568"
+       height="1.8061582"
+       x="110.48942"
+       y="-88.576759"
        transform="rotate(45)" />
     <g
        id="g5378"

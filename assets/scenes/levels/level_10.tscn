@@ -47,6 +47,9 @@ _data = {
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
 tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAD//wAAAAABAAAAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
 
+[node name="Player" parent="." index="1" unique_id=347908142]
+can_add_time = false
+
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 next_scene = ExtResource("2_2p5d7")
 
@@ -74,7 +77,8 @@ position = Vector2(896, 0)
 relative_time = NodePath("../TimeOutBlock4")
 seconds_remaining = -1
 
-[node name="PowerUp" parent="." index="11" unique_id=115893047 instance=ExtResource("3_sykao")]
+[node name="PowerUp" parent="." index="11" unique_id=115893047 node_paths=PackedStringArray("text_animation_player") instance=ExtResource("3_sykao")]
+text_animation_player = NodePath("../TutorialText/AnimationPlayer")
 
 [node name="TutorialText" parent="." index="12" unique_id=1355908254 instance=ExtResource("5_5sgbo")]
 modulate = Color(1, 0.6333333, 0, 0)

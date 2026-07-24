@@ -38,6 +38,7 @@ is_variable_max_speed = true
 jump_height = 150
 jump_time_to_peak = 0.2
 jump_time_to_descent = 0.2
+can_add_time = true
 
 [node name="JumptrajectoryLine" type="Line2D" parent="." unique_id=528940680]
 

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c4sh7j0cwcils"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_40hfq"]
+[ext_resource type="PackedScene" uid="uid://bqmp817hm2ynn" path="res://assets/scenes/levels/level_13.tscn" id="2_msu6e"]
+[ext_resource type="PackedScene" uid="uid://ckcij56j0djt5" path="res://assets/scenes/doodads/TimeInBlockEvenVert.tscn" id="2_tknqe"]
+[ext_resource type="PackedScene" uid="uid://hecks1e6igvf" path="res://assets/scenes/doodads/TimeOutBlockEvenVert.tscn" id="3_msu6e"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_40hfq")]
+
+[node name="Player" parent="." index="1" unique_id=347908142]
+can_add_time = true
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+next_scene = ExtResource("2_msu6e")
+
+[node name="TimeInBlockEvenVert" parent="." index="6" unique_id=1143183206 instance=ExtResource("2_tknqe")]
+position = Vector2(512, -128)
+seconds_remaining = 2
+
+[node name="TimeOutBlockEvenVert" parent="." index="7" unique_id=338073152 instance=ExtResource("3_msu6e")]
+position = Vector2(128, -128)
+
+[node name="TimeOutBlockEvenVert2" parent="." index="8" unique_id=2137121665 instance=ExtResource("3_msu6e")]
+position = Vector2(896, -128)
