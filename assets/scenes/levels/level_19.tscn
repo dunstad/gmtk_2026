@@ -1,5 +1,90 @@
-[gd_scene format=3 uid="uid://da7q7qvk6avv8"]
+[gd_scene format=4 uid="uid://da7q7qvk6avv8"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_swifr"]
+[ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_ift5h"]
+[ext_resource type="PackedScene" uid="uid://h4q78p0t77l4" path="res://assets/scenes/doodads/TimeInBlock.tscn" id="3_0eox1"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_swifr")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAABAAAAAAABAAMAAAAIAAAAAAAAAAIAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAD+/wAAAAAAAAIAAAAIAP//AAADAAEAAAAIAP7/AAADAAEAAAAIAP3/AAADAAEAAAAIAPz/AAADAAEAAAAIAPv/AAADAAEAAAAIAPr/AAADAAEAAAAIAPn/AAADAAAAAAAMAAAAAAABAAMAAAALAAAAAAABAAMAAAANAPj/AAADAAAAAAANAPn/AAADAAEAAAANAPr/AAADAAEAAAANAPv/AAADAAEAAAANAPz/AAADAAEAAAANAP3/AAADAAEAAAANAP7/AAADAAEAAAANAAAAAAACAAIAAAANAP//AAADAAEAAAA=")
+
+[node name="Camera2D" parent="." index="2" unique_id=1909339084]
+position = Vector2(640, -512)
+zoom = Vector2(0.48, 0.48)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1280, 0)
+
+[node name="TimeOutBlock" parent="." index="6" unique_id=338073152 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(128, -128)
+relative_time = NodePath("../TimeOutBlock2")
+seconds_remaining = 1
+
+[node name="TimeOutBlock2" parent="." index="7" unique_id=1465259094 instance=ExtResource("2_ift5h")]
+position = Vector2(128, -256)
+seconds_remaining = 1
+
+[node name="TimeInBlock" parent="." index="8" unique_id=1143183206 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_0eox1")]
+position = Vector2(640, -256)
+relative_time = NodePath("../TimeOutBlock2")
+seconds_remaining = 0
+
+[node name="TimeOutBlock3" parent="." index="9" unique_id=341273644 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(896, -256)
+relative_time = NodePath("../TimeInBlock")
+seconds_remaining = 0
+
+[node name="TimeOutBlock4" parent="." index="10" unique_id=1959918018 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(896, -384)
+relative_time = NodePath("../TimeOutBlock3")
+seconds_remaining = -1
+
+[node name="TimeOutBlock5" parent="." index="11" unique_id=242764572 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(896, -512)
+relative_time = NodePath("../TimeOutBlock4")
+seconds_remaining = -1
+
+[node name="TimeOutBlock7" parent="." index="12" unique_id=2138767452 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(896, -640)
+relative_time = NodePath("../TimeOutBlock5")
+seconds_remaining = -1
+
+[node name="TimeOutBlock8" parent="." index="13" unique_id=752435412 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(896, -768)
+relative_time = NodePath("../TimeOutBlock7")
+seconds_remaining = -1
+
+[node name="TimeOutBlock6" parent="." index="14" unique_id=148621665 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(1024, -1024)
+relative_time = NodePath("../TimeOutBlock5")
+seconds_remaining = 1
+
+[node name="TimeInBlock2" parent="." index="15" unique_id=1519151242 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_0eox1")]
+position = Vector2(384, -768)
+relative_time = NodePath("../TimeOutBlock8")
+seconds_remaining = 0
+
+[node name="TimeOutBlock9" parent="." index="16" unique_id=784091443 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ift5h")]
+position = Vector2(0, -768)
+relative_time = NodePath("../TimeInBlock2")
+seconds_remaining = 0
+
+[node name="TimeInBlock4" parent="." index="17" unique_id=805096096 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_0eox1")]
+position = Vector2(-384, -768)
+relative_time = NodePath("../TimeOutBlock9")
+seconds_remaining = 0
+
+[node name="TimeInBlock5" parent="." index="18" unique_id=1293054176 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_0eox1")]
+position = Vector2(-384, -896)
+relative_time = NodePath("../TimeInBlock4")
+
+[node name="TimeInBlock6" parent="." index="19" unique_id=1602830048 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_0eox1")]
+position = Vector2(256, -1024)
+relative_time = NodePath("../TimeInBlock5")
+seconds_remaining = 1
+
+[node name="TileMapLayer" parent="TimeInBlock6" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+/wAAAAABAAMAAAD9/wAAAAAAAAMAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAACAAMAAAA=")
+
+[editable path="TimeInBlock6"]
