@@ -46,7 +46,7 @@ func load_game_scene() -> void:
 	else:
 		# get_tree().change_scene_to_file(get_game_scene_path())
 		var root = get_tree().get_root()
-		root.get_child(0).get_child(0).queue_free()
+		root.get_child(0).find_child("MainMenu", true, false).queue_free()
 		var new_scene = load(get_game_scene_path()).instantiate()
 		root.get_child(0).add_child(new_scene)
 

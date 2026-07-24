@@ -2,7 +2,21 @@
 
 [ext_resource type="Script" uid="uid://cqi3jllppv5i2" path="res://assets/scripts/persistent.gd" id="1_1p338"]
 [ext_resource type="PackedScene" uid="uid://gqbd4w3fayv6" path="res://assets/scenes/scenes/menus/main_menu/main_menu_with_animations.tscn" id="2_udwek"]
+[ext_resource type="AudioStream" uid="uid://bl6n0sckekqf6" path="res://assets/sounds/amaksi-synthwave-retrowave-sythpop-121540.mp3" id="3_udwek"]
+[ext_resource type="Script" uid="uid://cc78r1culfa8w" path="res://assets/scripts/next_song.gd" id="4_86mt2"]
+[ext_resource type="AudioStream" uid="uid://bd8kqi06m3phe" path="res://assets/sounds/night-drive-moire-main-version-37878-02-29.mp3" id="5_ecbuc"]
 
 [node name="Persistent" type="Node" unique_id=1823964707]
 script = ExtResource("1_1p338")
 child_scene = ExtResource("2_udwek")
+
+[node name="amaksi" type="AudioStreamPlayer2D" parent="." unique_id=953093087 node_paths=PackedStringArray("next_song")]
+stream = ExtResource("3_udwek")
+autoplay = true
+script = ExtResource("4_86mt2")
+next_song = NodePath("../night-drive")
+
+[node name="night-drive" type="AudioStreamPlayer2D" parent="." unique_id=107705045 node_paths=PackedStringArray("next_song")]
+stream = ExtResource("5_ecbuc")
+script = ExtResource("4_86mt2")
+next_song = NodePath("../amaksi")
