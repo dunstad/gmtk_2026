@@ -12,7 +12,14 @@ func on_body_entered(body):
 	if (body is Player):
 		body.can_add_time = true
 		animation_player.play("vanish")
+
+		var initial_music_volume : float = PlayerConfig.get_config(AppSettings.AUDIO_SECTION, "Music", 1.0)
+		PlayerConfig.set_config(AppSettings.AUDIO_SECTION, "Music", initial_music_volume * .5)
 		body.find_child("PowerUpSound").play()
+		var lambda = func ():
+			PlayerConfig.set_config(AppSettings.AUDIO_SECTION, "Music", initial_music_volume)
+		body.find_child("PowerUpSound").finished.connect(lambda)
+
 		if text_animation_player != null:
 			text_animation_player.play("text_in")
 

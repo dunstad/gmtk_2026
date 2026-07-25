@@ -9,6 +9,7 @@ func _ready():
 
 func _process(delta: float):
     var music_volume : float = PlayerConfig.get_config(AppSettings.AUDIO_SECTION, "Music", 1.0)
+    # print(music_volume)
     volume_linear = starting_volume * music_volume
 
 func play_next_song():
