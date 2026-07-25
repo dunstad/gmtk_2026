@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://dnaq7kmo0qgvm"]
+
+[ext_resource type="StyleBox" uid="uid://cq4lcehtxksn3" path="res://assets/art/new_style_box_flat.tres" id="1_gmf0t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t7lk0"]
+
+[resource]
+Button/styles/normal = SubResource("StyleBoxEmpty_t7lk0")
+ItemList/styles/panel = ExtResource("1_gmf0t")
+PanelContainer/styles/panel = ExtResource("1_gmf0t")
+Tree/styles/panel = ExtResource("1_gmf0t")

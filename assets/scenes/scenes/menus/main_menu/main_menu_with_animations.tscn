@@ -318,18 +318,6 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
-[sub_resource type="Theme" id="Theme_5mglv"]
-/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
-Button/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
-Button/colors/font_outline_color = Color(0.078431375, 0, 0.3019608, 1)
-HBoxContainer/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
-HBoxContainer/constants/separation = 4
-MarginContainer/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
-MarginContainer/constants/margin_bottom = 0
-MarginContainer/constants/margin_left = 0
-MarginContainer/constants/margin_right = 0
-MarginContainer/constants/margin_top = 0
-
 [sub_resource type="Curve" id="Curve_dgbxw"]
 _data = [Vector2(0, 1), 0.0, -0.47865152, 0, 0, Vector2(1, 0), -2.0608616, 0.0, 0, 0]
 point_count = 2
@@ -401,9 +389,6 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
 lock = true
-
-[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
-theme = SubResource("Theme_5mglv")
 
 [node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1391782893]
 unique_name_in_owner = true

@@ -28,6 +28,10 @@ window/stretch/aspect="expand"
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
 
+[gui]
+
+theme/custom="uid://dnaq7kmo0qgvm"
+
 [input]
 
 Move_Right={
