@@ -74,7 +74,8 @@ func _refresh_options_button() -> void:
 	options_button.visible = options_menu_scene != null
 
 func _refresh_main_menu_button() -> void:
-	main_menu_button.visible = !get_main_menu_scene_path().is_empty()
+	pass
+	# main_menu_button.visible = !get_main_menu_scene_path().is_empty()
 
 func _ready() -> void:
 	_refresh_exit_button()

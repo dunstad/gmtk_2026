@@ -38,29 +38,31 @@ size_flags_vertical = 3
 [node name="CloseButton" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="0" unique_id=283447605]
 text = "Resume"
 
-[node name="RestartButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="1" unique_id=528931444]
+[node name="OptionsButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="1" unique_id=1282150269]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Restart"
+text = "Options"
 
-[node name="SaveGameButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="2" unique_id=259164717]
+[node name="RestartButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="2" unique_id=528931444]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="SaveGameButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="3" unique_id=259164717]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Save Game"
 
-[node name="LoadGameButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="3" unique_id=1030235254]
+[node name="LoadGameButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="4" unique_id=1030235254]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
 text = "Load Game"
 
-[node name="OptionsButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="4" unique_id=1282150269]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Options"
-
 [node name="MainMenuButton" type="Button" parent="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons" parent_id_path=PackedInt32Array(2087582287, 1139131565) index="5" unique_id=82168245]
 unique_name_in_owner = true
+process_mode = 4
+visible = false
 layout_mode = 2
 text = "Main Menu"
 
@@ -92,10 +94,10 @@ title = "Confirm Exit"
 text = "Exit the game?"
 
 [connection signal="hidden" from="PauseMenu" to="." method="_on_pause_menu_hidden"]
+[connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/OptionsButton" to="PauseMenu" method="_on_options_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/RestartButton" to="PauseMenu" method="_on_restart_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/SaveGameButton" to="PauseMenu" method="_on_save_game_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/LoadGameButton" to="PauseMenu" method="_on_load_game_button_pressed"]
-[connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/OptionsButton" to="PauseMenu" method="_on_options_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/MainMenuButton" to="PauseMenu" method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="PauseMenu/ContentContainer/BoxContainer/MenuButtonsMargin/MenuButtons/ExitButton" to="PauseMenu" method="_on_exit_button_pressed"]
 
