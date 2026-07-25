@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bl5q41pgamcu0"]
+
+[ext_resource type="PackedScene" uid="uid://blfmi8th0vvj2" path="res://assets/scenes/doodads/TimeBlock.tscn" id="1_4i02t"]
+[ext_resource type="Script" uid="uid://dair7v48askkr" path="res://assets/scripts/moment_block.gd" id="2_pdrgi"]
+
+[node name="MomentBlock" unique_id=509408672 instance=ExtResource("1_4i02t")]
+script = ExtResource("2_pdrgi")
+
+[node name="TileMapLayer" parent="." index="0" unique_id=1143183206]
+modulate = Color(1, 0, 1, 1)

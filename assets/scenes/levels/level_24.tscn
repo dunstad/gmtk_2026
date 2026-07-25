@@ -1,5 +1,42 @@
-[gd_scene format=3 uid="uid://dp4lvav5i0atd"]
+[gd_scene format=4 uid="uid://dp4lvav5i0atd"]
 
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_jtsuw"]
+[ext_resource type="PackedScene" uid="uid://dqa5coeqdlvkm" path="res://assets/scenes/levels/level_25.tscn" id="2_7w565"]
+[ext_resource type="PackedScene" uid="uid://bl5q41pgamcu0" path="res://assets/scenes/doodads/MomentBlock.tscn" id="2_ovyw1"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_jtsuw")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAABAAAAAAABAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+next_scene = ExtResource("2_7w565")
+
+[node name="MomentBlock" parent="." index="7" unique_id=509408672 instance=ExtResource("2_ovyw1")]
+position = Vector2(256, 0)
+seconds_remaining = 1
+
+[node name="MomentBlock2" parent="." index="8" unique_id=940747751 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ovyw1")]
+position = Vector2(384, 0)
+relative_time = NodePath("../MomentBlock")
+seconds_remaining = 1
+
+[node name="MomentBlock3" parent="." index="9" unique_id=1383978583 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ovyw1")]
+position = Vector2(512, 0)
+relative_time = NodePath("../MomentBlock2")
+seconds_remaining = 1
+
+[node name="MomentBlock4" parent="." index="10" unique_id=18087212 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ovyw1")]
+position = Vector2(640, 0)
+relative_time = NodePath("../MomentBlock3")
+seconds_remaining = 1
+
+[node name="MomentBlock5" parent="." index="11" unique_id=343766836 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ovyw1")]
+position = Vector2(768, 0)
+relative_time = NodePath("../MomentBlock4")
+seconds_remaining = 1
+
+[node name="MomentBlock6" parent="." index="12" unique_id=693630418 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_ovyw1")]
+position = Vector2(896, 0)
+relative_time = NodePath("../MomentBlock5")
+seconds_remaining = 1

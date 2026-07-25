@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bq2v6yik8hsqi"]
+
+[ext_resource type="PackedScene" uid="uid://bl5q41pgamcu0" path="res://assets/scenes/doodads/MomentBlock.tscn" id="1_pammq"]
+
+[node name="MomentBlockEvenVert" unique_id=509408672 instance=ExtResource("1_pammq")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 0, 0, 0, 0)
+
+[node name="RichTextLabel" parent="." index="1" unique_id=1915863219]
+offset_top = -64.0
+offset_bottom = 64.0

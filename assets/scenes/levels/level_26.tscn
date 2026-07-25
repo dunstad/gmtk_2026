@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dm84kjnh36u42"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_7blte"]
+[ext_resource type="PackedScene" uid="uid://ci2ia82dr3kr3" path="res://assets/scenes/levels/level_27.tscn" id="2_kofbh"]
+[ext_resource type="PackedScene" uid="uid://bl5q41pgamcu0" path="res://assets/scenes/doodads/MomentBlock.tscn" id="2_trxma"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_7blte")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 255, 255, 0, 0, 0, 0, 1, 0, 3, 0, 0, 0, 4, 0, 251, 255, 0, 0, 0, 0, 3, 0, 0, 0, 5, 0, 251, 255, 0, 0, 1, 0, 3, 0, 0, 0, 6, 0, 251, 255, 0, 0, 2, 0, 3, 0, 0, 0)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(640, -640)
+next_scene = ExtResource("2_kofbh")
+
+[node name="MomentBlock" parent="." index="7" unique_id=509408672 instance=ExtResource("2_trxma")]
+position = Vector2(128, -128)
+seconds_remaining = 1
+
+[node name="MomentBlock2" parent="." index="8" unique_id=1777714221 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_trxma")]
+position = Vector2(384, -256)
+relative_time = NodePath("../MomentBlock")
+seconds_remaining = 1
+
+[node name="MomentBlock3" parent="." index="9" unique_id=364777543 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_trxma")]
+position = Vector2(128, -384)
+relative_time = NodePath("../MomentBlock2")
+seconds_remaining = 1
+
+[node name="MomentBlock4" parent="." index="10" unique_id=357829078 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_trxma")]
+position = Vector2(-128, -512)
+relative_time = NodePath("../MomentBlock3")
+seconds_remaining = 1
+
+[node name="MomentBlock5" parent="." index="11" unique_id=152506859 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_trxma")]
+position = Vector2(128, -640)
+relative_time = NodePath("../MomentBlock4")
+seconds_remaining = 1
