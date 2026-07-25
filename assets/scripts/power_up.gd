@@ -12,6 +12,7 @@ func on_body_entered(body):
 	if (body is Player):
 		body.can_add_time = true
 		animation_player.play("vanish")
+		body.find_child("PowerUpSound").play()
 		if text_animation_player != null:
 			text_animation_player.play("text_in")
 

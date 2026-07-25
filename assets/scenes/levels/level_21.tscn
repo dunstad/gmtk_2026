@@ -9,7 +9,7 @@
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_etqjk")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
-tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAAHAAAAAAAAAAMAAAAAAPz/AAADAAIAAAAAAPv/AAADAAEAAAAAAPr/AAADAAEAAAAAAPn/AAADAAAAAAA=")
+tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAHAAAAAAAAAAMAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAAAAPz/AAADAAIAAAAAAPv/AAADAAEAAAAAAPr/AAADAAEAAAAAAPn/AAADAAAAAAA=")
 
 [node name="Player" parent="." index="1" unique_id=347908142]
 position = Vector2(-128, -768)
@@ -17,9 +17,8 @@ position = Vector2(-128, -768)
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 next_scene = ExtResource("2_o7v5w")
 
-[node name="TimeOutBlockEvenHoriz" parent="." index="6" unique_id=338073152 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_emomh")]
+[node name="TimeOutBlockEvenHoriz" parent="." index="6" unique_id=338073152 instance=ExtResource("2_emomh")]
 position = Vector2(-256, 0)
-relative_time = NodePath("")
 seconds_remaining = -2
 
 [node name="TimeInBlockEvenHoriz" parent="." index="7" unique_id=1143183206 instance=ExtResource("3_es8uy")]
@@ -41,7 +40,7 @@ position = Vector2(256, -256)
 relative_time = NodePath("../TimeInBlock2")
 seconds_remaining = 1
 
-[node name="TimeInBlock4" parent="." index="11" unique_id=24754745 node_paths=PackedStringArray("relative_time") instance=ExtResource("4_es8uy")]
+[node name="TimeInBlockEvenHoriz2" parent="." index="11" unique_id=515152194 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_es8uy")]
 position = Vector2(256, -384)
 relative_time = NodePath("../TimeInBlock3")
 seconds_remaining = 1
