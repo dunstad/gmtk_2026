@@ -17,7 +17,7 @@ unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-scroll_vertical = 0
+scroll_vertical = 799
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
@@ -27,14 +27,33 @@ size_flags_horizontal = 3
 
 [node name="HeaderSpace" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=1055754816]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 720)
+custom_minimum_size = Vector2(0, 648)
 layout_mode = 2
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" unique_id=951333631 instance=ExtResource("2_p6wio")]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(1152, 0)
 layout_mode = 2
+text = "[font_size=48]TIMELINE[/font_size]
+
+made by sprout
+
+font: Acquire by Sesohq
+https://www.fontspace.com/aquire-font-f43735
+
+music:
+Synthwave Retrowave Synthpop by Amaksi
+https://pixabay.com/music/synthwave-synthwave-retrowave-sythpop-121540/
+
+Night Drive by Moire
+https://uppbeat.io/music/tracks/moire/night-drive
+
+sound effects:
+Sci-fi Sounds at kenney.nl
+https://www.kenney.nl/assets/sci-fi-sounds
+"
 
 [node name="FooterSpace" type="Control" parent="ScrollContainer/VBoxContainer" unique_id=1487637013]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 720)
+custom_minimum_size = Vector2(0, 648)
 layout_mode = 2

@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bltcsnwggy656" path="res://assets/scenes/scenes/windows/main_menu_credits_window.tscn" id="4_tmvcl"]
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="5_pph4s"]
 [ext_resource type="FontFile" uid="uid://p2ep2ug7rrt3" path="res://assets/art/AquireBold-8Ma60.otf" id="5_qnwls"]
+[ext_resource type="Texture2D" uid="uid://cshq650c1vqp4" path="res://assets/art/title_text_lighter.png" id="6_tmvcl"]
+[ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="8_5mglv"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -315,6 +317,38 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
+[sub_resource type="Theme" id="Theme_5mglv"]
+/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
+Button/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
+Button/colors/font_outline_color = Color(0.078431375, 0, 0.3019608, 1)
+HBoxContainer/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
+HBoxContainer/constants/separation = 4
+MarginContainer/colors/background_color = Color(0.078431375, 0, 0.3019608, 1)
+MarginContainer/constants/margin_bottom = 0
+MarginContainer/constants/margin_left = 0
+MarginContainer/constants/margin_right = 0
+MarginContainer/constants/margin_top = 0
+
+[sub_resource type="Curve" id="Curve_dgbxw"]
+_data = [Vector2(0, 1), 0.0, -0.47865152, 0, 0, Vector2(1, 0), -2.0608616, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_0r3ur"]
+curve = SubResource("Curve_dgbxw")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vwifj"]
+particle_flag_disable_z = true
+initial_velocity_min = 12.0
+initial_velocity_max = 50.0
+gravity = Vector3(0, 0, 0)
+use_scale_3d = true
+scale_3d_min = Vector3(0.2, 0.3, 0.5)
+scale_3d_max = Vector3(1, 1.5, 1)
+scale_min = 0.19999999
+scale_max = 0.19999999
+scale_curve = SubResource("CurveTexture_0r3ur")
+color = Color(1, 0.6392157, 0, 0.1254902)
+
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_42no1")]
 script = ExtResource("2_pph4s")
 game_scene_path = "uid://csrtb3d80tmlk"
@@ -333,12 +367,22 @@ parameters/conditions/intro_done = false
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
+visible = false
 modulate = Color(1, 0.6392157, 0, 1)
 offset_top = 84.0
 offset_bottom = 180.0
 theme_override_fonts/font = ExtResource("5_qnwls")
 theme_override_font_sizes/font_size = 96
 text = "TIMELINE"
+
+[node name="TextureRect" type="TextureRect" parent="MenuContainer/TitleMargin/TitleContainer" index="1" unique_id=1238751088]
+layout_mode = 0
+offset_left = 361.99997
+offset_top = 95.0
+offset_right = 1596.0
+offset_bottom = 291.0
+scale = Vector2(0.34445086, 0.34445086)
+texture = ExtResource("6_tmvcl")
 
 [node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
@@ -355,6 +399,9 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
 lock = true
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
+theme = SubResource("Theme_5mglv")
 
 [node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
@@ -379,3 +426,39 @@ position = Vector2(149, -62)
 modulate = Color(0.08000007, 0, 0.3, 1)
 z_index = -10
 texture = ExtResource("5_pph4s")
+
+[node name="TimeParticles" type="GPUParticles2D" parent="." index="8" unique_id=193927590]
+z_index = -1
+position = Vector2(-88, -24)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("8_5mglv")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_vwifj")
+
+[node name="TimeParticles2" type="GPUParticles2D" parent="." index="9" unique_id=995507269]
+z_index = -1
+position = Vector2(-88, 310.00003)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("8_5mglv")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_vwifj")
+
+[node name="TimeParticles3" type="GPUParticles2D" parent="." index="10" unique_id=1171143810]
+z_index = -1
+position = Vector2(-88, 662)
+scale = Vector2(1.0256412, 1.0256412)
+amount = 30
+amount_ratio = 0.8
+texture = ExtResource("8_5mglv")
+lifetime = 60.0
+preprocess = 20.0
+visibility_rect = Rect2(-100, -100, 1000, 1000)
+process_material = SubResource("ParticleProcessMaterial_vwifj")

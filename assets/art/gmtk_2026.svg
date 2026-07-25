@@ -24,9 +24,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="11.313708"
-     inkscape:cx="-45.82936"
-     inkscape:cy="-15.246991"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="464.92271"
+     inkscape:cy="419.66787"
      inkscape:window-width="1858"
      inkscape:window-height="1057"
      inkscape:window-x="-8"
@@ -35,6 +35,38 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
+    <linearGradient
+       id="linearGradient9"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.15850145"
+         id="stop7" />
+      <stop
+         style="stop-color:#ffa300;stop-opacity:1;"
+         offset="0.44380403"
+         id="stop8" />
+      <stop
+         style="stop-color:#ffa300;stop-opacity:0;"
+         offset="0.72910661"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4"
+       inkscape:collect="always">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.34005764"
+         id="stop6" />
+      <stop
+         style="stop-color:#ffa300;stop-opacity:1;"
+         offset="0.49567723"
+         id="stop4" />
+      <stop
+         style="stop-color:#ffa300;stop-opacity:0;"
+         offset="1"
+         id="stop5" />
+    </linearGradient>
     <pattern
        inkscape:collect="always"
        xlink:href="#pattern5443"
@@ -4770,11 +4802,48 @@
          values="0.2 0 0 0.36 0.4 0 0.2 0 0.36 0.4 0 0 0.2 0.36 0.4 0 0 0 1 0"
          id="feColorMatrix5444" />
     </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient5"
+       x1="56.982136"
+       y1="45.286755"
+       x2="56.982136"
+       y2="157.35156"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient9"
+       id="linearGradient5-2"
+       x1="56.982136"
+       y1="45.286755"
+       x2="56.982136"
+       y2="157.35156"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(7.8363233,49.207576)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4"
+       id="linearGradient5-6"
+       x1="56.982136"
+       y1="45.286755"
+       x2="56.982136"
+       y2="157.35156"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(128.25706,2.3805242)" />
   </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round"
+       id="rect6-0"
+       width="122.3065"
+       height="34.945957"
+       x="126.35818"
+       y="87.068893"
+       ry="0" />
     <rect
        style="stroke:none;fill:url(#pattern5443)"
        transform="scale(0.26458333)"
@@ -4835,6 +4904,39 @@
        height="11.68358"
        x="-16.404167"
        y="-12.964583"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82-8"
+       width="11.68358"
+       height="11.68358"
+       x="-17.118101"
+       y="76.794273"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <rect
+       style="fill:#ffa300;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82-8-1"
+       width="11.68358"
+       height="11.68358"
+       x="-17.118101"
+       y="80.059837"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <rect
+       style="fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82-8-1-2"
+       width="11.68358"
+       height="11.68358"
+       x="-17.118101"
+       y="83.570618"
        inkscape:export-filename="rounded_square.png"
        inkscape:export-xdpi="278.27084"
        inkscape:export-ydpi="278.27084"
@@ -8116,5 +8218,119 @@
        inkscape:export-filename="smile.png"
        inkscape:export-xdpi="646.79755"
        inkscape:export-ydpi="646.79755" />
+    <rect
+       style="fill:#4000c3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82-8-2"
+       width="11.68358"
+       height="11.68358"
+       x="-17.118101"
+       y="87.070038"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <rect
+       style="fill:#00d2ff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1-4-82-8-6"
+       width="11.68358"
+       height="11.68358"
+       x="-17.165817"
+       y="90.609337"
+       inkscape:export-filename="rounded_square.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084"
+       ry="2.5256972" />
+    <g
+       id="g6"
+       transform="translate(10.807394,2.2489583)"
+       inkscape:export-filename="title_text.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+         x="-0.904221"
+         y="110.7384"
+         id="text1-5"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:#14004d;fill-opacity:1;stroke:none;stroke-width:0.5"
+           x="-0.904221"
+           y="110.7384"
+           id="tspan3-4">timeline</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient5);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+         x="-0.32025176"
+         y="109.76465"
+         id="text1"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:url(#linearGradient5);fill-opacity:1;stroke:none;stroke-width:0.5"
+           x="-0.32025176"
+           y="109.76465"
+           id="tspan3">timeline</tspan></text>
+    </g>
+    <g
+       id="g9"
+       inkscape:export-filename="title_text_lighter.png"
+       inkscape:export-xdpi="278.27084"
+       inkscape:export-ydpi="278.27084">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#4000c3;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+         x="127.35284"
+         y="113.11893"
+         id="text1-5-2"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:#4000c3;fill-opacity:1;stroke:none;stroke-width:0.5"
+           x="127.35284"
+           y="113.11893"
+           id="tspan3-4-4">timeline</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient5-6);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+         x="127.93681"
+         y="112.14517"
+         id="text1-8"><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:url(#linearGradient5-6);fill-opacity:1;stroke:none;stroke-width:0.5"
+           x="127.93681"
+           y="112.14517"
+           id="tspan3-6">timeline</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="text1-5-8"
+       transform="translate(-0.7,0.7)"><textPath
+         xlink:href="#path6"
+         id="textPath9"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:#14004d;fill-opacity:1;stroke:none;stroke-width:0.5"
+           id="tspan3-4-7">timeline</tspan></textPath></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.4px;line-height:1.25;font-family:Aquire;-inkscape-font-specification:Aquire;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:url(#linearGradient5-2);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="text1-4"><textPath
+         xlink:href="#path6"
+         id="textPath6"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Aquire;-inkscape-font-specification:'Aquire Bold';fill:url(#linearGradient5-2);fill-opacity:1;stroke:none;stroke-width:0.5"
+           id="tspan3-2">timeline</tspan></textPath></text>
+    <path
+       style="fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       d="m 10.881165,155.85554 c 47.269384,-11.56694 75.985104,-8.5683 112.648785,0"
+       id="path6"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       d="m 11.173154,89.412407 c 56.324394,-4.13451 56.324394,-4.17172 112.648796,0"
+       id="path6-1"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#14004d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.499999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect6"
+       width="112.64879"
+       height="5.8417902"
+       x="11.173154"
+       y="89.412407"
+       ry="0" />
   </g>
 </svg>

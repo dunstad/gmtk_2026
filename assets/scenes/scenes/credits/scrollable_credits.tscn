@@ -15,5 +15,22 @@ script = ExtResource("1_djkda")
 [node name="CreditsLabel" parent="." unique_id=346732506 instance=ExtResource("2_7dq77")]
 unique_name_in_owner = true
 layout_mode = 1
+text = "[font_size=48]TIMELINE[/font_size]
+
+made by sprout
+
+font: Acquire by Sesohq
+https://www.fontspace.com/aquire-font-f43735
+
+music:
+Synthwave Retrowave Synthpop by Amaksi
+https://pixabay.com/music/synthwave-synthwave-retrowave-sythpop-121540/
+
+Night Drive by Moire
+https://uppbeat.io/music/tracks/moire/night-drive
+
+sound effects:
+Sci-fi Sounds at kenney.nl
+https://www.kenney.nl/assets/sci-fi-sounds"
 fit_content = false
 scroll_active = true
