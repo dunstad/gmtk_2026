@@ -61,6 +61,7 @@ func _ready():
 	jump_buffer_timer.wait_time = jump_buffer_timer_value
 	start_pos = global_position
 	$BlinkPlayer.play("blink")
+	$IdlePlayer.play("idle")
 
 
 # Sets the gravity depending on the context
@@ -131,6 +132,7 @@ func _physics_process(delta):
 		$SpriteOrigin/Sprite2D/ClockSprite.visible = false
 
 	if Input.is_action_just_pressed("Add_Time"):
+		$IdlePlayer.stop()
 		$AddTimePlayer.stop()
 		$AddTimePlayer.play("add_time")
 
@@ -153,7 +155,6 @@ func _physics_process(delta):
 		jump_cut()
 	
 	if velocity != Vector2.ZERO:
-		# print(velocity)
 		$AnimatedSprite2D.play("walk")
 		if $Grounded.is_colliding():
 			$SpriteOrigin/Sprite2D/WalkParticles.emitting = true
@@ -162,6 +163,8 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.play("idle")
 		$SpriteOrigin/Sprite2D/WalkParticles.emitting = false
+		if not $AddTimePlayer.current_animation == "add_time":
+			$IdlePlayer.play("idle")
 		
 #	if Input.is_action_just_pressed("Preview_Jump"):
 #		_projected_jump_trajectory(delta, sign(velocity.x))
@@ -178,6 +181,7 @@ func jump():
 	if coyote_timer.time_left > 0.0:
 		coyote_timer.stop()
 		velocity.y = jump_velocity
+		$IdlePlayer.stop()
 		$JumpPlayer.play("jump")
 		$JumpSound.play(.1)
 	elif _get_gravity(velocity) == fall_gravity:

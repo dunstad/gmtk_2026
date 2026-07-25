@@ -226,6 +226,44 @@ _data = {
 &"add_time": SubResource("Animation_nqk56")
 }
 
+[sub_resource type="Animation" id="Animation_21mgd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteOrigin:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g6es3"]
+resource_name = "idle"
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteOrigin:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.95), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_21mgd"]
+_data = {
+&"RESET": SubResource("Animation_21mgd"),
+&"idle": SubResource("Animation_g6es3")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=840063268]
 floor_block_on_wall = false
 script = ExtResource("1_4w2it")
@@ -390,6 +428,9 @@ libraries/ = SubResource("AnimationLibrary_3r2ih")
 [node name="AddTimePlayer" type="AnimationPlayer" parent="." unique_id=2030701479]
 root_node = NodePath("../JumpPlayer")
 libraries/ = SubResource("AnimationLibrary_oiycl")
+
+[node name="IdlePlayer" type="AnimationPlayer" parent="." unique_id=177610136]
+libraries/ = SubResource("AnimationLibrary_21mgd")
 
 [node name="Grounded" type="RayCast2D" parent="." unique_id=1778992121]
 position = Vector2(-20, 61)
