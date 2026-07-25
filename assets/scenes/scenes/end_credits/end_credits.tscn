@@ -32,16 +32,29 @@ texture = ExtResource("3_5nw4w")
 expand_mode = 1
 
 [node name="ScrollContainer" parent="." index="2" unique_id=1826061058]
-scroll_vertical = 1868
-
-[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="0" unique_id=1055754816]
-custom_minimum_size = Vector2(0, 648)
+scroll_vertical = 1130
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="1" unique_id=951333631]
-custom_minimum_size = Vector2(1152, 0)
+text = "[font_size=48]TIMELINE[/font_size]
 
-[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="2" unique_id=1487637013]
-custom_minimum_size = Vector2(0, 648)
+made by sprout
+
+font: Acquire by Sesohq
+https://www.fontspace.com/aquire-font-f43735
+
+music:
+Synthwave Retrowave Synthpop by Amaksi
+https://pixabay.com/music/synthwave-synthwave-retrowave-sythpop-121540/
+
+Night Drive by Moire
+https://uppbeat.io/music/tracks/moire/night-drive
+
+sound effects:
+Sci-fi Sounds at kenney.nl
+https://www.kenney.nl/assets/sci-fi-sounds
+
+playtesting: Allison
+"
 
 [node name="CenterContainer" type="CenterContainer" parent="." index="3" unique_id=1516904581]
 layout_mode = 0
