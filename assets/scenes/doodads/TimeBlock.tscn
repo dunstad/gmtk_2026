@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bjwaj01ak0ht6" path="res://assets/scripts/time_block.gd" id="1_s31jt"]
 [ext_resource type="AudioStream" uid="uid://dgqdwvffcuqdj" path="res://assets/sounds/forceField_000_reverse.ogg" id="3_krc1x"]
 [ext_resource type="AudioStream" uid="uid://bjq32w6ax68q0" path="res://assets/sounds/forceField_000.ogg" id="3_m5xxv"]
+[ext_resource type="Script" uid="uid://dcw847o802pxj" path="res://assets/scripts/sound_effect_volume.gd" id="4_wch0t"]
 
 [sub_resource type="Animation" id="Animation_krc1x"]
 resource_name = "RESET"
@@ -81,7 +82,9 @@ libraries/ = SubResource("AnimationLibrary_m5xxv")
 [node name="FadeIn" type="AudioStreamPlayer2D" parent="." unique_id=1045633340]
 stream = ExtResource("3_krc1x")
 max_distance = 750.0
+script = ExtResource("4_wch0t")
 
 [node name="FadeOut" type="AudioStreamPlayer2D" parent="." unique_id=747999190]
 stream = ExtResource("3_m5xxv")
 max_distance = 750.0
+script = ExtResource("4_wch0t")

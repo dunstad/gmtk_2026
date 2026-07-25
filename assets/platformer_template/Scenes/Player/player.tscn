@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cprn1a1tbk6ec" path="res://assets/art/clock_with_hands_orange.png" id="6_xjwqw"]
 [ext_resource type="Texture2D" uid="uid://df2x5f5jw0qke" path="res://assets/art/smile.png" id="7_4vtr2"]
 [ext_resource type="AudioStream" uid="uid://20tp2s2g0voh" path="res://assets/sounds/laserRetro_002_jumpified.ogg" id="9_3r2ih"]
+[ext_resource type="Script" uid="uid://dcw847o802pxj" path="res://assets/scripts/sound_effect_volume.gd" id="10_g6es3"]
 [ext_resource type="AudioStream" uid="uid://d25644qs8f5hs" path="res://assets/sounds/laserSmall_000.ogg" id="10_nqk56"]
 [ext_resource type="AudioStream" uid="uid://b3a3muv1jo2j8" path="res://assets/sounds/power_up.wav" id="11_oiycl"]
 
@@ -440,12 +441,15 @@ target_position = Vector2(0, 2)
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=255502473]
 stream = ExtResource("9_3r2ih")
+script = ExtResource("10_g6es3")
 
 [node name="AddTimeSound" type="AudioStreamPlayer2D" parent="." unique_id=371738347]
 stream = ExtResource("10_nqk56")
+script = ExtResource("10_g6es3")
 
 [node name="PowerUpSound" type="AudioStreamPlayer2D" parent="." unique_id=492096446]
 position = Vector2(256, -232.32263)
 scale = Vector2(1.0017948, 0.99553066)
 stream = ExtResource("11_oiycl")
 volume_db = 5.0
+script = ExtResource("10_g6es3")
