@@ -32,7 +32,7 @@ texture = ExtResource("3_5nw4w")
 expand_mode = 1
 
 [node name="ScrollContainer" parent="." index="2" unique_id=1826061058]
-scroll_vertical = 1130
+scroll_vertical = 1199
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" parent_id_path=PackedInt32Array(1799859771) index="1" unique_id=951333631]
 text = "[font_size=48]TIMELINE[/font_size]
@@ -52,6 +52,9 @@ https://uppbeat.io/music/tracks/moire/night-drive
 sound effects:
 Sci-fi Sounds at kenney.nl
 https://www.kenney.nl/assets/sci-fi-sounds
+
+input prompts:
+https://www.kenney.nl/assets/input-prompts
 
 playtesting: Allison
 "

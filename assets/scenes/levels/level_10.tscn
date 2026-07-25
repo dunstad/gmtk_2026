@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_i0epw"]
 [ext_resource type="PackedScene" uid="uid://dtcd57rsx8wro" path="res://assets/scenes/doodads/PowerUp.tscn" id="3_sykao"]
 [ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="5_5sgbo"]
+[ext_resource type="Texture2D" uid="uid://jju4456f4dlo" path="res://assets/art/keyboard_w.png" id="6_b2ggq"]
+[ext_resource type="Texture2D" uid="uid://bmqo2kyxkpf5i" path="res://assets/art/xbox_rt.png" id="7_158w5"]
 
 [sub_resource type="Animation" id="Animation_2p5d7"]
 length = 0.001
@@ -86,7 +88,17 @@ offset_left = -146.0
 offset_top = -783.0
 offset_right = 1454.0
 offset_bottom = 497.0
-text = "Press W or right trigger to add time."
+text = "Press     or     to add time."
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="TutorialText" index="2" unique_id=760684948]
 libraries/ = SubResource("AnimationLibrary_b2ggq")
+
+[node name="Sprite2D" type="Sprite2D" parent="TutorialText" index="3" unique_id=1620047790]
+position = Vector2(563.00006, 60)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("6_b2ggq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="TutorialText" index="4" unique_id=1865319267]
+position = Vector2(766, 60)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("7_158w5")

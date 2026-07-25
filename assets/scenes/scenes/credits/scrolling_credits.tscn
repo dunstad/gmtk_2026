@@ -17,7 +17,7 @@ unique_name_in_owner = true
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
-scroll_vertical = 410
+scroll_vertical = 419
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
@@ -51,6 +51,9 @@ https://uppbeat.io/music/tracks/moire/night-drive
 sound effects:
 Sci-fi Sounds at kenney.nl
 https://www.kenney.nl/assets/sci-fi-sounds
+
+input prompts:
+https://www.kenney.nl/assets/input-prompts
 
 playtesting: Allison"
 

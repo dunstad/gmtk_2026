@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://iwkpiidkne0v"]
+
+[ext_resource type="Texture2D" uid="uid://wa4svbebdin5" path="res://assets/art/generic_button_circle_outline.png" id="1_mumn6"]
+
+[node name="ButtonGroup" type="Node2D" unique_id=1973503488]
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1465868304]
+position = Vector2(-0.058776855, -24.058838)
+scale = Vector2(0.65441185, 0.65441185)
+texture = ExtResource("1_mumn6")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1969005374]
+position = Vector2(-24.058838, -0.05883789)
+scale = Vector2(0.65441185, 0.65441185)
+texture = ExtResource("1_mumn6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=168595322]
+position = Vector2(23.941162, -0.05883789)
+scale = Vector2(0.65441185, 0.65441185)
+texture = ExtResource("1_mumn6")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=1527967683]
+position = Vector2(-0.058776855, 23.941162)
+scale = Vector2(0.65441185, 0.65441185)
+texture = ExtResource("1_mumn6")

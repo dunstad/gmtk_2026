@@ -45,13 +45,17 @@ position = Vector2(384, -768)
 [node name="TileMapLayer" parent="TimeOutBlockEvenVert2" index="0" unique_id=1143183206]
 tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAP//AAADAAEAAAAAAP7/AAADAAAAAAAAAAEAAAADAAIAAAA=")
 
-[node name="TimeOutBlock" parent="." index="12" unique_id=948705703 instance=ExtResource("3_thjh6")]
-position = Vector2(896, -768)
+[node name="TimeOutBlock" parent="." index="12" unique_id=1417389485 instance=ExtResource("3_thjh6")]
+position = Vector2(768, -896)
+
+[node name="TileMapLayer" parent="TimeOutBlock" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAP//AAADAAAAAAAAAAEAAAADAAIAAAA=")
 
 [node name="TimeInBlock" parent="." index="13" unique_id=609383515 node_paths=PackedStringArray("relative_time") instance=ExtResource("4_thjh6")]
 position = Vector2(896, -640)
-relative_time = NodePath("../TimeOutBlock")
+relative_time = NodePath("")
 seconds_remaining = 0
 
 [editable path="TimeOutBlockEvenVert"]
 [editable path="TimeOutBlockEvenVert2"]
+[editable path="TimeOutBlock"]

@@ -3,6 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_ox0mv"]
 [ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="2_aqje6"]
 [ext_resource type="PackedScene" uid="uid://bvxtwhb3n4mpi" path="res://assets/scenes/levels/level_02.tscn" id="3_ox0mv"]
+[ext_resource type="Texture2D" uid="uid://347xsjbd3112" path="res://assets/art/keyboard_a.png" id="3_yicot"]
+[ext_resource type="Texture2D" uid="uid://cunv4wblwawrm" path="res://assets/art/keyboard_d.png" id="4_w42yl"]
+[ext_resource type="Texture2D" uid="uid://wii8ulcfy0eh" path="res://assets/art/generic_stick_horizontal.png" id="5_w42yl"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ox0mv")]
 
@@ -13,6 +16,23 @@ can_add_time = false
 position = Vector2(638, -208)
 
 [node name="TutorialText" parent="." index="4" unique_id=1355908254 instance=ExtResource("2_aqje6")]
+text = "Use     and     or      to move.
+Touch the flag to win!"
+
+[node name="Sprite2D" type="Sprite2D" parent="TutorialText" index="2" unique_id=1257120012]
+position = Vector2(444.30466, 60.304626)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("3_yicot")
+
+[node name="Sprite2D2" type="Sprite2D" parent="TutorialText" index="3" unique_id=1128494868]
+position = Vector2(719.3047, 60.304626)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("4_w42yl")
+
+[node name="Sprite2D3" type="Sprite2D" parent="TutorialText" index="4" unique_id=1591556554]
+position = Vector2(937, 60)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("5_w42yl")
 
 [node name="NextLevel" parent="." index="5" unique_id=653421381]
 next_scene = ExtResource("3_ox0mv")

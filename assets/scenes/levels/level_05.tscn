@@ -4,6 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_jws6d"]
 [ext_resource type="PackedScene" uid="uid://b8g2kfty1nwk3" path="res://assets/scenes/levels/level_07.tscn" id="2_wuc3q"]
 [ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="3_lru3v"]
+[ext_resource type="Texture2D" uid="uid://7k82ppjwdv6v" path="res://assets/art/keyboard_r.png" id="5_t5boy"]
+[ext_resource type="PackedScene" uid="uid://iwkpiidkne0v" path="res://assets/art/button_group.tscn" id="6_65shq"]
+[ext_resource type="Texture2D" uid="uid://54gc26iyu6ad" path="res://assets/art/generic_button_circle.png" id="7_07gus"]
 
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_ce8n6")]
 
@@ -29,4 +32,17 @@ seconds_remaining = -1
 [node name="TutorialText" parent="." index="8" unique_id=1355908254 instance=ExtResource("3_lru3v")]
 offset_top = -789.0
 offset_bottom = 491.0
-text = "Press R or the Y button to restart."
+text = "Press     or     to restart."
+
+[node name="Sprite2D" type="Sprite2D" parent="TutorialText" index="2" unique_id=1275653392]
+position = Vector2(606, 61)
+scale = Vector2(1.4470203, 1.4470203)
+texture = ExtResource("5_t5boy")
+
+[node name="ButtonGroup" parent="TutorialText" index="3" unique_id=1973503488 instance=ExtResource("6_65shq")]
+position = Vector2(808, 62)
+
+[node name="Sprite2D2" parent="TutorialText/ButtonGroup" index="0" unique_id=1465868304]
+texture = ExtResource("7_07gus")
+
+[editable path="TutorialText/ButtonGroup"]
