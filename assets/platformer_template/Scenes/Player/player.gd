@@ -175,6 +175,12 @@ func restart():
 	global_position = start_pos
 	get_tree().get_nodes_in_group("LevelTimer")[-1].restart()
 
+	$FadeIn.play(.5)
+	var time_particles = $SpriteOrigin/Sprite2D/TimeParticles.duplicate()
+	time_particles.global_position = $SpriteOrigin/Sprite2D/TimeParticles.global_position
+	get_parent().add_child(time_particles)
+	time_particles.emitting = true
+
 
 # Adds the player's jump velocity if able
 func jump():

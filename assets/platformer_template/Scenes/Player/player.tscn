@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://dcw847o802pxj" path="res://assets/scripts/sound_effect_volume.gd" id="10_g6es3"]
 [ext_resource type="AudioStream" uid="uid://d25644qs8f5hs" path="res://assets/sounds/laserSmall_000.ogg" id="10_nqk56"]
 [ext_resource type="AudioStream" uid="uid://b3a3muv1jo2j8" path="res://assets/sounds/power_up.wav" id="11_oiycl"]
+[ext_resource type="AudioStream" uid="uid://dgqdwvffcuqdj" path="res://assets/sounds/forceField_000_reverse.ogg" id="13_21mgd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5h3j6"]
 animations = [{
@@ -452,4 +453,9 @@ position = Vector2(256, -232.32263)
 scale = Vector2(1.0017948, 0.99553066)
 stream = ExtResource("11_oiycl")
 volume_db = 5.0
+script = ExtResource("10_g6es3")
+
+[node name="FadeIn" type="AudioStreamPlayer2D" parent="." unique_id=1009281018]
+stream = ExtResource("13_21mgd")
+max_distance = 750.0
 script = ExtResource("10_g6es3")
