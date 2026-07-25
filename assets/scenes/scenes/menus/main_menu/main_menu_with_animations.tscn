@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c6k5nnpbypshi" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_42no1"]
 [ext_resource type="Script" uid="uid://dn2x0h41cwamj" path="res://assets/scenes/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_pph4s"]
+[ext_resource type="PackedScene" uid="uid://dlywhjum3kin8" path="res://assets/scenes/scenes/menus/level_select_menu/level_select_menu.tscn" id="3_dgbxw"]
 [ext_resource type="PackedScene" uid="uid://lrdokrwano6q" path="res://assets/scenes/scenes/windows/main_menu_options_window.tscn" id="3_qnwls"]
 [ext_resource type="PackedScene" uid="uid://bltcsnwggy656" path="res://assets/scenes/scenes/windows/main_menu_credits_window.tscn" id="4_tmvcl"]
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="5_pph4s"]
@@ -352,6 +353,7 @@ color = Color(1, 0.6392157, 0, 0.1254902)
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_42no1")]
 script = ExtResource("2_pph4s")
 game_scene_path = "uid://csrtb3d80tmlk"
+level_select_packed_scene = ExtResource("3_dgbxw")
 options_packed_scene = ExtResource("3_qnwls")
 credits_packed_scene = ExtResource("4_tmvcl")
 
@@ -402,6 +404,11 @@ lock = true
 
 [node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0" unique_id=1434444510]
 theme = SubResource("Theme_5mglv")
+
+[node name="LevelSelectButton" type="Button" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="1" unique_id=1391782893]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Level Select"
 
 [node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
@@ -462,3 +469,5 @@ lifetime = 60.0
 preprocess = 20.0
 visibility_rect = Rect2(-100, -100, 1000, 1000)
 process_material = SubResource("ParticleProcessMaterial_vwifj")
+
+[connection signal="pressed" from="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]

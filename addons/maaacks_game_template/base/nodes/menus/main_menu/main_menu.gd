@@ -10,6 +10,7 @@ signal game_exited
 ## Defines the path to the game scene. Hides the play button if empty.
 @export_file("*.tscn") var game_scene_path : String
 ## The scene to open when a player clicks the 'Options' button.
+@export var level_select_packed_scene : PackedScene
 @export var options_packed_scene : PackedScene
 ## The scene to open when a player clicks the 'Credits' button.
 @export var credits_packed_scene : PackedScene
@@ -120,6 +121,9 @@ func _ready() -> void:
 
 func _on_new_game_button_pressed() -> void:
 	new_game()
+
+func _on_level_select_button_pressed() -> void:
+	_open_sub_menu(level_select_packed_scene)
 
 func _on_options_button_pressed() -> void:
 	_open_sub_menu(options_packed_scene)

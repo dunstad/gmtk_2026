@@ -43,7 +43,7 @@ item_0/text = "1 - ExampleLevel"
 
 [node name="SceneLister" type="Node" parent="." unique_id=1595290469]
 script = ExtResource("3_mj5cl")
-files = Array[String](["res://assets/scenes/scenes/game_scene/levels/level_1.tscn", "res://assets/scenes/scenes/game_scene/levels/level_2.tscn", "res://assets/scenes/scenes/game_scene/levels/level_3.tscn"])
+files = Array[String](["res://assets/scenes/levels/level_01.tscn", "res://assets/scenes/levels/level_02.tscn", "res://assets/scenes/levels/level_03.tscn", "res://assets/scenes/levels/level_04.tscn", "res://assets/scenes/levels/level_05.tscn", "res://assets/scenes/levels/level_06.tscn", "res://assets/scenes/levels/level_07.tscn", "res://assets/scenes/levels/level_08.tscn", "res://assets/scenes/levels/level_09.tscn", "res://assets/scenes/levels/level_10.tscn", "res://assets/scenes/levels/level_11.tscn", "res://assets/scenes/levels/level_12.tscn", "res://assets/scenes/levels/level_13.tscn", "res://assets/scenes/levels/level_14.tscn", "res://assets/scenes/levels/level_15.tscn", "res://assets/scenes/levels/level_16.tscn", "res://assets/scenes/levels/level_17.tscn", "res://assets/scenes/levels/level_18.tscn", "res://assets/scenes/levels/level_19.tscn", "res://assets/scenes/levels/level_20.tscn", "res://assets/scenes/levels/level_21.tscn", "res://assets/scenes/levels/level_22.tscn", "res://assets/scenes/levels/level_23.tscn", "res://assets/scenes/levels/level_24.tscn"])
 directory = "res://assets/scenes/scenes/game_scene/levels"
 
 [connection signal="item_activated" from="Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]

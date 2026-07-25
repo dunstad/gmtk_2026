@@ -28,4 +28,9 @@ func add_levels_to_container() -> void:
 		level_paths.append(file_path)
 
 func _on_level_buttons_container_item_activated(index: int) -> void:
+	# print(level_paths[index])
+	var root = get_tree().get_root()
+	root.get_child(0).find_child("MainMenu", true, false).queue_free()
+	var new_scene = load(level_paths[index]).instantiate()
+	root.get_child(0).add_child(new_scene)
 	level_selected.emit()
