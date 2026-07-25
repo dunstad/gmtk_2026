@@ -1,6 +1,6 @@
-extends AudioStreamPlayer2D
+extends AudioStreamPlayer
 
-@export var next_song: AudioStreamPlayer2D
+@export var next_song: AudioStreamPlayer
 
 func _ready():
     finished.connect(play_next_song)

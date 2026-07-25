@@ -9,10 +9,10 @@
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_nibn4")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
-tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAAIAAAAAAABAAMAAAD///v/AAAAAAMAAAAAAPv/AAACAAMAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAALAP7/AAADAAAAAAALAP//AAADAAEAAAAIAAAAAAABAAMAAAAJAAAAAAABAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAADAPn/AAADAAAAAAADAPr/AAADAAEAAAADAPv/AAADAAEAAAADAPz/AAADAAIAAAA=")
 
 [node name="Player" parent="." index="1" unique_id=347908142]
-position = Vector2(0, -768)
+position = Vector2(256, -768)
 
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 next_scene = ExtResource("2_x0hkn")

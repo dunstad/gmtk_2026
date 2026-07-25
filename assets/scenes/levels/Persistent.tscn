@@ -10,13 +10,15 @@
 script = ExtResource("1_1p338")
 child_scene = ExtResource("2_udwek")
 
-[node name="amaksi" type="AudioStreamPlayer2D" parent="." unique_id=953093087 node_paths=PackedStringArray("next_song")]
+[node name="amaksi2" type="AudioStreamPlayer" parent="." unique_id=1427939288 node_paths=PackedStringArray("next_song")]
 stream = ExtResource("3_udwek")
+volume_db = -10.0
 autoplay = true
 script = ExtResource("4_86mt2")
-next_song = NodePath("../night-drive")
+next_song = NodePath("../night-drive2")
 
-[node name="night-drive" type="AudioStreamPlayer2D" parent="." unique_id=107705045 node_paths=PackedStringArray("next_song")]
+[node name="night-drive2" type="AudioStreamPlayer" parent="." unique_id=206405391 node_paths=PackedStringArray("next_song")]
 stream = ExtResource("5_ecbuc")
+volume_db = -10.0
 script = ExtResource("4_86mt2")
-next_song = NodePath("../amaksi")
+next_song = NodePath("../amaksi2")

@@ -19,8 +19,8 @@ func _ready():
 	text = $RichTextLabel
 	text.text = str(seconds_remaining)
 
-	self.update_time(0)
+	self.update_time(0, false)
 
-func update_time(change: int):
+func update_time(change: int, sound=false):
 	seconds_remaining += change
 	text.text = str(seconds_remaining)

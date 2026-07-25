@@ -28,7 +28,11 @@ func load_main_menu() -> void:
 	if scene_loader_node:
 		scene_loader_node.load_scene(get_main_menu_scene_path())
 	else:
-		get_tree().change_scene_to_file(get_main_menu_scene_path())
+		# get_tree().change_scene_to_file(get_main_menu_scene_path())
+		var root = get_tree().get_root()
+		root.get_child(0).find_child("BaseLevel", true, false).queue_free()
+		var new_scene = load(get_main_menu_scene_path()).instantiate()
+		root.get_child(0).add_child(new_scene)
 
 func exit_game() -> void:
 	if OS.has_feature("web"):

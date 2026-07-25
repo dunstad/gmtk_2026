@@ -130,7 +130,13 @@ func _physics_process(delta):
 	else:
 		$SpriteOrigin/Sprite2D/ClockSprite.visible = false
 
+	if Input.is_action_just_pressed("Add_Time"):
+		$AddTimePlayer.stop()
+		$AddTimePlayer.play("add_time")
+
+
 	if can_add_time and Input.is_action_just_pressed("Add_Time"):
+		$AddTimeSound.play()
 		get_tree().get_nodes_in_group("LevelTimer")[-1].add_time(1)
 		var time_particles = $SpriteOrigin/Sprite2D/TimeParticles.duplicate()
 		time_particles.global_position = $SpriteOrigin/Sprite2D/TimeParticles.global_position
@@ -169,10 +175,11 @@ func restart():
 
 # Adds the player's jump velocity if able
 func jump():
-	$JumpPlayer.play("jump")
 	if coyote_timer.time_left > 0.0:
 		coyote_timer.stop()
 		velocity.y = jump_velocity
+		$JumpPlayer.play("jump")
+		$JumpSound.play(.1)
 	elif _get_gravity(velocity) == fall_gravity:
 		jump_buffer_timer.start()
 

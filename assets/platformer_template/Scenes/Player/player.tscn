@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bj08d3i6bxyl4" path="res://assets/art/circle.png" id="5_xjwqw"]
 [ext_resource type="Texture2D" uid="uid://cprn1a1tbk6ec" path="res://assets/art/clock_with_hands_orange.png" id="6_xjwqw"]
 [ext_resource type="Texture2D" uid="uid://df2x5f5jw0qke" path="res://assets/art/smile.png" id="7_4vtr2"]
+[ext_resource type="AudioStream" uid="uid://20tp2s2g0voh" path="res://assets/sounds/laserRetro_002_jumpified.ogg" id="9_3r2ih"]
+[ext_resource type="AudioStream" uid="uid://d25644qs8f5hs" path="res://assets/sounds/laserSmall_000.ogg" id="10_nqk56"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5h3j6"]
 animations = [{
@@ -163,7 +165,69 @@ _data = {
 &"jump": SubResource("Animation_0r3ur")
 }
 
+[sub_resource type="Animation" id="Animation_oiycl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpriteOrigin:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nqk56"]
+resource_name = "add_time"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../SpriteOrigin/Sprite2D/Eyes:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../SpriteOrigin:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(1, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oiycl"]
+_data = {
+&"RESET": SubResource("Animation_oiycl"),
+&"add_time": SubResource("Animation_nqk56")
+}
+
 [node name="Player" type="CharacterBody2D" unique_id=840063268]
+floor_block_on_wall = false
 script = ExtResource("1_4w2it")
 max_speed = 700.0
 air_acceleration = 100.0
@@ -172,6 +236,9 @@ jump_height = 150
 jump_time_to_peak = 0.2
 jump_time_to_descent = 0.2
 can_add_time = true
+
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1990811228]
+current = true
 
 [node name="JumptrajectoryLine" type="Line2D" parent="." unique_id=528940680]
 
@@ -320,7 +387,17 @@ libraries/ = SubResource("AnimationLibrary_0r3ur")
 root_node = NodePath("../BlinkPlayer")
 libraries/ = SubResource("AnimationLibrary_3r2ih")
 
+[node name="AddTimePlayer" type="AnimationPlayer" parent="." unique_id=2030701479]
+root_node = NodePath("../JumpPlayer")
+libraries/ = SubResource("AnimationLibrary_oiycl")
+
 [node name="Grounded" type="RayCast2D" parent="." unique_id=1778992121]
 position = Vector2(-20, 61)
 scale = Vector2(1.0000001, 1.0000001)
 target_position = Vector2(0, 2)
+
+[node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=255502473]
+stream = ExtResource("9_3r2ih")
+
+[node name="AddTimeSound" type="AudioStreamPlayer2D" parent="." unique_id=371738347]
+stream = ExtResource("10_nqk56")
