@@ -29,6 +29,12 @@ position = Vector2(-1141.9999, 61.000008)
 [node name="TimeParticles3" parent="Camera2D" index="3" unique_id=1463182641]
 position = Vector2(-1141.9999, 573.00006)
 
+[node name="LevelNumber" parent="Camera2D" index="4" unique_id=1355908254]
+offset_left = -1014.0
+offset_top = -579.0
+offset_right = 586.0
+offset_bottom = 701.0
+
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 position = Vector2(1536, 0)
 next_scene = ExtResource("2_68qpw")

@@ -6,7 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://b8lyumi3caqqe" path="res://assets/art/clock_without_hands_lighter.png" id="4_1onrq"]
 [ext_resource type="Texture2D" uid="uid://bwe3i08ifek55" path="res://assets/art/background.png" id="4_tf2qc"]
 [ext_resource type="Texture2D" uid="uid://bshs83a03x2h3" path="res://assets/art/rect1-4.png" id="5_q243q"]
+[ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="6_21vqr"]
 [ext_resource type="PackedScene" uid="uid://mmxpnx20bo23" path="res://assets/scenes/doodads/NextLevel.tscn" id="6_we6oa"]
+[ext_resource type="Script" uid="uid://bvwuwtdyaqmpy" path="res://assets/scripts/level_numbers.gd" id="7_hp7nx"]
 [ext_resource type="PackedScene" uid="uid://o0tnxlpmm0c" path="res://assets/scenes/scenes/end_credits/end_credits.tscn" id="7_xefct"]
 [ext_resource type="PackedScene" uid="uid://bv1psa8ebdb5f" path="res://assets/scenes/doodads/RestartArea.tscn" id="8_xefct"]
 [ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="10_s1nxx"]
@@ -107,6 +109,15 @@ lifetime = 60.0
 preprocess = 20.0
 visibility_rect = Rect2(-100, -100, 1000, 1000)
 process_material = SubResource("ParticleProcessMaterial_4opws")
+
+[node name="LevelNumber" parent="Camera2D" unique_id=1355908254 instance=ExtResource("6_21vqr")]
+offset_left = -977.0
+offset_top = 437.0
+offset_right = 623.0
+offset_bottom = 1717.0
+text = "level_01"
+horizontal_alignment = 0
+script = ExtResource("7_hp7nx")
 
 [node name="Background" type="Node2D" parent="." unique_id=2008904633]
 
