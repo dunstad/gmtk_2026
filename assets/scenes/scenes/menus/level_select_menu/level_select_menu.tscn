@@ -24,7 +24,7 @@ script = ExtResource("2_xx8vl")
 
 [node name="LevelButtonsContainer" type="ItemList" parent="Control" unique_id=727725567]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(400, 600)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,13 +37,12 @@ offset_right = 200.0
 offset_bottom = 17.5
 grow_horizontal = 2
 grow_vertical = 2
-auto_height = true
 item_count = 1
 item_0/text = "1 - ExampleLevel"
 
 [node name="SceneLister" type="Node" parent="." unique_id=1595290469]
 script = ExtResource("3_mj5cl")
-files = Array[String](["res://assets/scenes/levels/level_01.tscn", "res://assets/scenes/levels/level_02.tscn", "res://assets/scenes/levels/level_03.tscn", "res://assets/scenes/levels/level_04.tscn", "res://assets/scenes/levels/level_05.tscn", "res://assets/scenes/levels/level_06.tscn", "res://assets/scenes/levels/level_07.tscn", "res://assets/scenes/levels/level_08.tscn", "res://assets/scenes/levels/level_09.tscn", "res://assets/scenes/levels/level_10.tscn", "res://assets/scenes/levels/level_11.tscn", "res://assets/scenes/levels/level_12.tscn", "res://assets/scenes/levels/level_13.tscn", "res://assets/scenes/levels/level_14.tscn", "res://assets/scenes/levels/level_15.tscn", "res://assets/scenes/levels/level_16.tscn", "res://assets/scenes/levels/level_17.tscn", "res://assets/scenes/levels/level_18.tscn", "res://assets/scenes/levels/level_19.tscn", "res://assets/scenes/levels/level_20.tscn", "res://assets/scenes/levels/level_21.tscn", "res://assets/scenes/levels/level_22.tscn", "res://assets/scenes/levels/level_23.tscn", "res://assets/scenes/levels/level_24.tscn"])
+files = Array[String](["res://assets/scenes/levels/level_01.tscn", "res://assets/scenes/levels/level_02.tscn", "res://assets/scenes/levels/level_03.tscn", "res://assets/scenes/levels/level_04.tscn", "res://assets/scenes/levels/level_05.tscn", "res://assets/scenes/levels/level_06.tscn", "res://assets/scenes/levels/level_07.tscn", "res://assets/scenes/levels/level_08.tscn", "res://assets/scenes/levels/level_09.tscn", "res://assets/scenes/levels/level_10.tscn", "res://assets/scenes/levels/level_11.tscn", "res://assets/scenes/levels/level_12.tscn", "res://assets/scenes/levels/level_13.tscn", "res://assets/scenes/levels/level_14.tscn", "res://assets/scenes/levels/level_15.tscn", "res://assets/scenes/levels/level_16.tscn", "res://assets/scenes/levels/level_17.tscn", "res://assets/scenes/levels/level_18.tscn", "res://assets/scenes/levels/level_19.tscn", "res://assets/scenes/levels/level_20.tscn", "res://assets/scenes/levels/level_21.tscn", "res://assets/scenes/levels/level_22.tscn", "res://assets/scenes/levels/level_23.tscn", "res://assets/scenes/levels/level_24.tscn", "res://assets/scenes/levels/level_25.tscn", "res://assets/scenes/levels/level_26.tscn", "res://assets/scenes/levels/level_27.tscn", "res://assets/scenes/levels/level_28.tscn", "res://assets/scenes/levels/level_29.tscn", "res://assets/scenes/levels/level_30.tscn", "res://assets/scenes/levels/level_31.tscn", "res://assets/scenes/levels/level_32.tscn"])
 directory = "res://assets/scenes/scenes/game_scene/levels"
 
 [connection signal="item_activated" from="Control/LevelButtonsContainer" to="." method="_on_level_buttons_container_item_activated"]

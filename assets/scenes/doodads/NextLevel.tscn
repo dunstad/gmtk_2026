@@ -70,6 +70,7 @@ position = Vector2(64, -72.5)
 shape = SubResource("CircleShape2D_acvp6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=912907136]
+z_index = -1
 material = ExtResource("3_f2lb2")
 position = Vector2(64, -67.5)
 texture = ExtResource("3_u8jqu")

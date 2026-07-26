@@ -25,6 +25,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAADAAEAAAAAAP3/AAADAAAAAAAAAAMAAAADAAI
 
 [node name="TimeOutBlockEvenHoriz2" parent="." index="8" unique_id=1241242161 instance=ExtResource("2_8xoc7")]
 position = Vector2(-128, 0)
+seconds_remaining = 5
 
 [node name="MomentBlock" parent="." index="9" unique_id=509408672 instance=ExtResource("4_y6w8o")]
 position = Vector2(128, -128)

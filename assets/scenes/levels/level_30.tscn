@@ -8,16 +8,15 @@
 [node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_jbj25")]
 
 [node name="TileMapLayer" parent="." index="0" unique_id=212305829]
-tile_map_data = PackedByteArray("AAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAAAAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAAAAAAAAAACAAMAAAA=")
+tile_map_data = PackedByteArray("AAAAAAAAAAACAAMAAAD//wAAAAABAAMAAAD+//7/AAADAAAAAAD+////AAADAAEAAAALAP7/AAADAAAAAAALAP//AAADAAEAAAAJAAAAAAAAAAMAAAAKAAAAAAABAAMAAAALAAAAAAACAAIAAAD+/wAAAAAAAAIAAAA=")
 
 [node name="NextLevel" parent="." index="4" unique_id=653421381]
 position = Vector2(1280, 0)
 next_scene = ExtResource("2_iqakx")
 
-[node name="MomentBlockEvenHoriz" parent="." index="7" unique_id=509408672 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_va2ma")]
+[node name="MomentBlockEvenHoriz" parent="." index="7" unique_id=509408672 instance=ExtResource("2_va2ma")]
 position = Vector2(128, 0)
-relative_time = NodePath("")
-seconds_remaining = -2
+seconds_remaining = 4
 
 [node name="MomentBlock6" parent="." index="8" unique_id=120909885 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_iqakx")]
 position = Vector2(384, -256)
