@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://bxxu2gk184knn"]
+
+[ext_resource type="PackedScene" uid="uid://cgi1h835kcrt5" path="res://assets/scenes/levels/base_level.tscn" id="1_oqq0y"]
+[ext_resource type="PackedScene" uid="uid://d2k6qdkhysqkv" path="res://assets/scenes/levels/level_30.tscn" id="2_n18it"]
+[ext_resource type="PackedScene" uid="uid://bl5q41pgamcu0" path="res://assets/scenes/doodads/MomentBlock.tscn" id="2_qfgxm"]
+[ext_resource type="PackedScene" uid="uid://jd0piugxwi2y" path="res://assets/scenes/doodads/MomentBlockEvenHoriz.tscn" id="3_n18it"]
+
+[node name="BaseLevel" unique_id=1904546924 instance=ExtResource("1_oqq0y")]
+
+[node name="TileMapLayer" parent="." index="0" unique_id=212305829]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 3, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 11, 0, 0, 0, 0, 0, 2, 0, 3, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="Camera2D" parent="." index="2" unique_id=1909339084]
+position = Vector2(640, -384)
+zoom = Vector2(0.56, 0.56)
+
+[node name="NextLevel" parent="." index="4" unique_id=653421381]
+position = Vector2(1408, 0)
+next_scene = ExtResource("2_n18it")
+
+[node name="MomentBlock" parent="." index="7" unique_id=509408672 instance=ExtResource("2_qfgxm")]
+position = Vector2(-256, -128)
+seconds_remaining = 1
+
+[node name="MomentBlock2" parent="." index="8" unique_id=1198693938 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(-256, -256)
+relative_time = NodePath("../MomentBlock")
+seconds_remaining = 1
+
+[node name="MomentBlock3" parent="." index="9" unique_id=638578247 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(-256, -384)
+relative_time = NodePath("../MomentBlock2")
+seconds_remaining = 1
+
+[node name="MomentBlock4" parent="." index="10" unique_id=2085304568 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(-256, -512)
+relative_time = NodePath("../MomentBlock3")
+seconds_remaining = 1
+
+[node name="MomentBlock5" parent="." index="11" unique_id=65716783 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(-256, -640)
+relative_time = NodePath("../MomentBlock4")
+seconds_remaining = 1
+
+[node name="MomentBlockEvenHoriz" parent="." index="12" unique_id=2010805959 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_n18it")]
+position = Vector2(128, -640)
+relative_time = NodePath("../MomentBlock5")
+seconds_remaining = -1
+
+[node name="MomentBlock6" parent="." index="13" unique_id=1284487130 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(384, -896)
+relative_time = NodePath("../MomentBlockEvenHoriz")
+seconds_remaining = 0
+
+[node name="TileMapLayer" parent="MomentBlock6" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 0, 0, 0, 0)
+
+[node name="MomentBlockEvenHoriz2" parent="." index="14" unique_id=744883044 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_n18it")]
+position = Vector2(512, -640)
+relative_time = NodePath("../MomentBlockEvenHoriz")
+seconds_remaining = -1
+
+[node name="MomentBlock7" parent="." index="15" unique_id=1703480529 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(768, -896)
+relative_time = NodePath("../MomentBlockEvenHoriz2")
+seconds_remaining = 0
+
+[node name="TileMapLayer" parent="MomentBlock7" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 0, 0, 0, 0)
+
+[node name="MomentBlockEvenHoriz3" parent="." index="16" unique_id=147479119 node_paths=PackedStringArray("relative_time") instance=ExtResource("3_n18it")]
+position = Vector2(896, -640)
+relative_time = NodePath("../MomentBlockEvenHoriz2")
+seconds_remaining = -1
+
+[node name="MomentBlock8" parent="." index="17" unique_id=759827791 node_paths=PackedStringArray("relative_time") instance=ExtResource("2_qfgxm")]
+position = Vector2(1152, -896)
+relative_time = NodePath("../MomentBlockEvenHoriz3")
+seconds_remaining = 0
+
+[node name="TileMapLayer" parent="MomentBlock8" index="0" unique_id=1143183206]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 3, 0, 2, 0, 0, 0, 0, 0, 255, 255, 0, 0, 3, 0, 0, 0, 0, 0)
+
+[editable path="MomentBlock6"]
+[editable path="MomentBlock7"]
+[editable path="MomentBlock8"]

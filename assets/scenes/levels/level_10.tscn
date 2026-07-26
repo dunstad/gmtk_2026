@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://r0rvriv8buij" path="res://assets/scenes/doodads/TimeOutBlock.tscn" id="2_i0epw"]
 [ext_resource type="PackedScene" uid="uid://dtcd57rsx8wro" path="res://assets/scenes/doodads/PowerUp.tscn" id="3_sykao"]
 [ext_resource type="PackedScene" uid="uid://ne2j436712jx" path="res://assets/scenes/doodads/TutorialText.tscn" id="5_5sgbo"]
-[ext_resource type="Texture2D" uid="uid://jju4456f4dlo" path="res://assets/art/keyboard_w.png" id="6_b2ggq"]
+[ext_resource type="Texture2D" uid="uid://bm88v4acpgfc1" path="res://assets/art/keyboard_arrow_up.png" id="6_b2ggq"]
 [ext_resource type="Texture2D" uid="uid://bmqo2kyxkpf5i" path="res://assets/art/xbox_rt.png" id="7_158w5"]
 
 [sub_resource type="Animation" id="Animation_2p5d7"]
