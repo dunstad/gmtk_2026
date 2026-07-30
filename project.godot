@@ -24,6 +24,10 @@ buses/default_bus_layout="uid://ct33mw21k8ao4"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/Anthony/gmtk_2026/gmtk-2026/build/movie.avi"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg")
